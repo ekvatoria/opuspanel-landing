@@ -61,6 +61,34 @@
             font-size: 0.8rem;
             color: #a1a1aa;
         }
+        .actions {
+            margin-top: 1.25rem;
+        }
+        .demo-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.65rem 1.35rem;
+            background: linear-gradient(180deg, #18181b 0%, #121215 100%);
+            border: 1px solid rgba(188, 154, 255, 0.3);
+            border-radius: 9999px;
+            color: #f4f4f5;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 0 20px rgba(188, 154, 255, 0.12);
+            transition: all 0.25s ease;
+        }
+        .demo-btn:hover {
+            border-color: #bc9aff;
+            background: rgba(188, 154, 255, 0.1);
+            box-shadow: 0 0 30px rgba(188, 154, 255, 0.3);
+            transform: translateY(-2px);
+            color: #ffffff;
+        }
+        .demo-btn svg {
+            color: #bc9aff;
+        }
         @keyframes pulse {
             0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0px rgba(188, 154, 255, 0)); }
             50% { transform: scale(1.02); filter: drop-shadow(0 0 25px rgba(188, 154, 255, 0.3)); }
@@ -78,6 +106,15 @@
         
         <div class="badge">
             ⚡ Deployment Initialized — Coming Soon
+        </div>
+
+        <div class="actions">
+            <a href="/demovideo" class="demo-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                Demo Videosunu İzle
+            </a>
         </div>
     </div>
 

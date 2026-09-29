@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpusPanel — Demo Video</title>
+    <meta name="description" content="OpusPanel sistem demo videosu ve yetenekleri.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #09090b;
+            color: #f4f4f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem 1rem 3rem 1rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Arka plan ışık efekti */
+        body::before {
+            content: "";
+            position: absolute;
+            top: -150px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(188, 154, 255, 0.12) 0%, rgba(9, 9, 11, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .header-nav {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            z-index: 1;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #f4f4f5;
+            transition: opacity 0.2s ease;
+        }
+
+        .brand-link:hover {
+            opacity: 0.85;
+        }
+
+        .nav-logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 1px solid rgba(188, 154, 255, 0.25);
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-tagline {
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.65rem;
+            color: #bc9aff;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.55rem 1.1rem;
+            background-color: #18181b;
+            color: #a1a1aa;
+            text-decoration: none;
+            border: 1px solid #27272a;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .back-btn:hover {
+            color: #f4f4f5;
+            border-color: #bc9aff;
+            background-color: rgba(188, 154, 255, 0.08);
+            transform: translateX(-2px);
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.4rem 0.9rem;
+            background-color: #18181b;
+            border: 1px solid rgba(188, 154, 255, 0.3);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #bc9aff;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            text-align: center;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #a1a1aa;
+            text-align: center;
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Video Çerçevesi */
+        .video-wrapper {
+            width: 100%;
+            position: relative;
+            background: linear-gradient(145deg, #18181b 0%, #09090b 100%);
+            border: 1px solid rgba(188, 154, 255, 0.25);
+            border-radius: 20px;
+            padding: 8px;
+            box-shadow: 0 0 50px rgba(188, 154, 255, 0.12),
+                        0 20px 40px rgba(0, 0, 0, 0.6);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-wrapper:hover {
+            border-color: rgba(188, 154, 255, 0.45);
+            box-shadow: 0 0 70px rgba(188, 154, 255, 0.18),
+                        0 25px 50px rgba(0, 0, 0, 0.7);
+        }
+
+        .video-inner {
+            width: 100%;
+            border-radius: 14px;
+            overflow: hidden;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            max-height: 75vh;
+            display: block;
+            outline: none;
+            background-color: #000;
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            width: 100%;
+            margin-top: 2.5rem;
+        }
+
+        .card {
+            background-color: #121215;
+            border: 1px solid #27272a;
+            border-radius: 14px;
+            padding: 1.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(188, 154, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .card-icon {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .card-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #f4f4f5;
+            margin-bottom: 0.25rem;
+        }
+
+        .card-desc {
+            font-size: 0.8rem;
+            color: #71717a;
+            line-height: 1.4;
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            color: #52525b;
+            font-size: 0.8rem;
+            font-family: "Courier New", Courier, monospace;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.75rem 2rem 0.75rem;
+            }
+            .header-nav {
+                margin-bottom: 1.5rem;
+            }
+            .video-wrapper {
+                padding: 4px;
+                border-radius: 14px;
+            }
+            .video-inner {
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header-nav">
+        <a href="/" class="brand-link">
+            <img src="/logo.png" alt="OpusPanel Logo" class="nav-logo">
+            <div class="brand-text">
+                <span class="brand-title">OpusPanel</span>
+                <span class="brand-tagline">Over Powered Engineering</span>
+            </div>
+        </a>
+        <a href="/" class="back-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            <span>Ana Sayfa</span>
+        </a>
+    </header>
+
+    <main class="main-container">
+        <div class="badge">⚡ Product Demo</div>
+        <h1>OpusPanel Sistem İncelemesi</h1>
+        <p class="subtitle">Over Powered Engineering yönetim paneli ve yeni nesil operasyonel özelliklerin canlı gösterimi.</p>
+
+        <div class="video-wrapper">
+            <div class="video-inner">
+                <video controls playsinline preload="metadata">
+                    <source src="/videos/OpusPanelDemo.mp4" type="video/mp4">
+                    Tarayıcınız video etiketini desteklemiyor.
+                </video>
+            </div>
+        </div>
+
+        <div class="info-cards">
+            <div class="card">
+                <span class="card-icon">🚀</span>
+                <div class="card-title">Yüksek Performans</div>
+                <div class="card-desc">Gelişmiş mimari ile optimize edilmiş akıcı arayüz deneyimi.</div>
+            </div>
+            <div class="card">
+                <span class="card-icon">🛡️</span>
+                <div class="card-title">Güçlü Kontrol</div>
+                <div class="card-desc">Tüm modül ve operasyonların tek merkezden kesintisiz yönetimi.</div>
+            </div>
+            <div class="card">
+                <span class="card-icon">⚡</span>
+                <div class="card-title">Modern Altyapı</div>
+                <div class="card-desc">İhtiyacınıza göre ölçeklenen kararlı ve hızlı servis yapılandırması.</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        © 2026 OpusPanel — Over Powered Engineering
+    </footer>
+
+</body>
+</html>

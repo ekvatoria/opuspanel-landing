@@ -1,122 +1,985 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpusPanel — Over Powered Engineering</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-index: border-box;
-        }
-        body {
-            background-color: #09090b;
-            color: #f4f4f5;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow: hidden;
-        }
-        .container {
-            text-align: center;
-            padding: 2rem;
-        }
-        .logo-wrapper {
-            position: relative;
-            display: inline-block;
-            animation: pulse 4s infinite ease-in-out;
-        }
-        .logo {
-            width: 480px;
-            height: auto;
-            border-radius: 16px;
-            display: block;
-        }
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-top: 1.5rem;
-            letter-spacing: -0.05em;
-            color: #f4f4f5;
-        }
-        p {
-            font-family: "Courier New", Courier, monospace;
-            font-size: 0.55rem;
-            font-weight: 600;
-            color: #bc9aff; /* Elektrik moru tınısı */
-            margin-top: 0.75rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-        }
-        .badge {
-            display: inline-block;
-            margin-top: 2.5rem;
-            padding: 0.5rem 1rem;
-            background-color: #18181b;
-            border: 1px solid #27272a;
-            border-radius: 9999px;
-            font-size: 0.8rem;
-            color: #a1a1aa;
-        }
-        .actions {
-            margin-top: 1.25rem;
-        }
-        .demo-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 0.65rem 1.35rem;
-            background: linear-gradient(180deg, #18181b 0%, #121215 100%);
-            border: 1px solid rgba(188, 154, 255, 0.3);
-            border-radius: 9999px;
-            color: #f4f4f5;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-decoration: none;
-            box-shadow: 0 0 20px rgba(188, 154, 255, 0.12);
-            transition: all 0.25s ease;
-        }
-        .demo-btn:hover {
-            border-color: #bc9aff;
-            background: rgba(188, 154, 255, 0.1);
-            box-shadow: 0 0 30px rgba(188, 154, 255, 0.3);
-            transform: translateY(-2px);
-            color: #ffffff;
-        }
-        .demo-btn svg {
-            color: #bc9aff;
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0px rgba(188, 154, 255, 0)); }
-            50% { transform: scale(1.02); filter: drop-shadow(0 0 25px rgba(188, 154, 255, 0.3)); }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpusPanel — Kurumsal Mühendislik, ERP, CRM, DSS &amp; APPO Çözümleri</title>
+  <meta name="description" content="OpusPanel (Over Powered Engineering): Fabrikalar için Opus CRM, Opus ERP, Opus ASM, Opus DSS ve akademi/eğitmenler için Opus APPO akıllı randevu &amp; hakediş platformu.">
+  <meta name="theme-color" content="#06080f">
+  <meta property="og:title" content="OpusPanel — Over Powered Engineering">
+  <meta property="og:description" content="Üretimden randevuya, sahadan karar masasına tek kurumsal mühendislik omurgası. Opus CRM, ERP, ASM, DSS ve APPO çözümlerini keşfedin.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/opus-emblem.png">
+
+  <link rel="icon" type="image/png" href="/assets/opus-emblem.png">
+  <link rel="apple-touch-icon" href="/assets/opus-emblem.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <a href="#main-content" class="skip-link visually-hidden">Ana içeriğe geç</a>
 
-    <div class="container">
-        <div class="logo-wrapper">
-            <img src="logo.png" alt="OpusPanel Logo" class="logo">
-        </div>
-        <h1>OpusPanel</h1>
-        <p>Over Powered Engıneerıng</p>
-        
-        <div class="badge">
-            ⚡ Deployment Initialized — Coming Soon
-        </div>
+  <!-- Fixed Shrinking Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#hero" class="brand" aria-label="OpusPanel Ana Sayfa">
+        <span class="brand-emblem">
+          <img src="/assets/opus-emblem.webp" alt="" width="512" height="512" decoding="async">
+        </span>
+        <span class="brand-copy">
+          <span class="brand-name">OpusPanel</span>
+          <span class="brand-tagline">Over Powered Engineering</span>
+        </span>
+      </a>
 
-        <div class="actions">
-            <a href="/demovideo" class="demo-btn">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                </svg>
-                Demo Videosunu İzle
-            </a>
-        </div>
+      <nav class="primary-nav" aria-label="Ana">
+        <ul class="nav-list">
+          <li><a href="#cozumler" class="nav-link">Çözümlerimiz</a></li>
+          <li><a href="#slayt-sunumu" class="nav-link">Çözüm Slaytları</a></li>
+          <li><a href="#opus-appo" class="nav-link">Opus APPO Demo</a></li>
+          <li><a href="#kurumsal-fark" class="nav-link">Mühendislik Farkı</a></li>
+          <li><a href="#iletisim" class="nav-link">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#iletisim" class="btn btn--primary btn--sm header-demo-btn">Canlı Demo Planla</a>
+        <button type="button" class="mobile-menu-btn" id="openMobileMenu" aria-label="Menüyü aç" aria-controls="mobileDrawer" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="4" y1="7" x2="20" y2="7"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="17" x2="20" y2="17"></line>
+          </svg>
+        </button>
+      </div>
     </div>
+  </header>
 
+  <!-- Mobile Navigation Drawer Dialog -->
+  <dialog id="mobileDrawer" class="mobile-drawer" closedby="any" aria-labelledby="drawerTitle">
+    <div class="drawer-head">
+      <span id="drawerTitle" class="brand-name">OpusPanel Menü</span>
+      <button type="button" class="btn btn--ghost btn--sm" id="closeMobileMenu" aria-label="Menüyü kapat">Kapat</button>
+    </div>
+    <nav aria-label="Mobil">
+      <ul class="drawer-nav">
+        <li><a href="#cozumler" data-drawer-link>Çözümlerimiz (5 Ürün) <span>→</span></a></li>
+        <li><a href="#slayt-sunumu" data-drawer-link>İnteraktif Slayt Sunumu <span>→</span></a></li>
+        <li><a href="#opus-appo" data-drawer-link>Opus APPO Demo Videosu <span>→</span></a></li>
+        <li><a href="#kurumsal-fark" data-drawer-link>Mühendislik Farkı <span>→</span></a></li>
+        <li><a href="#iletisim" data-drawer-link>15 Dk Canlı Demo <span>→</span></a></li>
+      </ul>
+    </nav>
+  </dialog>
+
+  <main id="main-content" tabindex="-1">
+    <!-- Hero Observatory -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="eyebrow">
+              <span class="pulse-dot" aria-hidden="true"></span>
+              <span>Kurumsal Mühendislik Ekosistemi</span>
+            </div>
+
+            <h1 class="hero-title">
+              Üretimden Randevuya, <span class="gradient-text">Sahadan Karar Masasına</span> Tek Omurga
+            </h1>
+
+            <p class="hero-lead">
+              OpusPanel; üretim yapan fabrikalar için <strong>CRM, ERP, Satış Sonrası (ASM) ve Veri Madenciliği Tabanlı Karar Destek (DSS)</strong> çözümlerini, müzik &amp; sanat akademileri ile fitness eğitmenleri için ise <strong>Opus APPO</strong> randevu ve hakediş platformunu tek mühendislik standardında birleştirir.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#slayt-sunumu" class="btn btn--primary">
+                <span>Çözüm Slaytlarını İncele</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+              <a href="#opus-appo" class="btn btn--ghost">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+                <span>Opus APPO Videosunu İzle</span>
+              </a>
+            </div>
+
+            <ul class="hero-solution-pills" aria-label="OpusPanel ürün ailesi kısayolları">
+              <li>
+                <a href="#cozumler" class="mini-pill" data-jump-solution="crm">
+                  <span class="mini-pill-dot" style="background: #8b5cf6;" aria-hidden="true"></span>Opus CRM
+                </a>
+              </li>
+              <li>
+                <a href="#cozumler" class="mini-pill" data-jump-solution="erp">
+                  <span class="mini-pill-dot" style="background: #34d399;" aria-hidden="true"></span>Opus ERP
+                </a>
+              </li>
+              <li>
+                <a href="#cozumler" class="mini-pill" data-jump-solution="asm">
+                  <span class="mini-pill-dot" style="background: #38bdf8;" aria-hidden="true"></span>Opus ASM
+                </a>
+              </li>
+              <li>
+                <a href="#cozumler" class="mini-pill" data-jump-solution="dss">
+                  <span class="mini-pill-dot" style="background: #c084fc;" aria-hidden="true"></span>Opus DSS
+                </a>
+              </li>
+              <li>
+                <a href="#cozumler" class="mini-pill" data-jump-solution="appo">
+                  <span class="mini-pill-dot" style="background: #fbbf24;" aria-hidden="true"></span>Opus APPO
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-stage">
+            <div class="hero-frame">
+              <div class="hero-frame-bar">
+                <div class="window-dots" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <span class="frame-caption">OPUS SUITE • BACKOFFICE + MOBİL SAHA</span>
+              </div>
+              <button type="button" class="hero-slide-trigger" id="heroOpenDeck" aria-label="Opus ERP kurumsal sunumunu tam ekran incele">
+                <img
+                  src="/assets/slides/slide-01-740.webp"
+                  srcset="/assets/slides/slide-01-740.webp 740w, /assets/slides/slide-01-1480.webp 1480w"
+                  sizes="(max-width: 960px) 92vw, 42vw"
+                  alt="OpusPanel Opus ERP Backoffice ve iOS Android mobil saha ekranları genel görünümü"
+                  width="1487"
+                  height="2105"
+                  fetchpriority="high"
+                  loading="eager"
+                  decoding="sync"
+                >
+                <span class="hero-slide-overlay">
+                  <span class="hero-slide-overlay-label">9 Slaytlık İnteraktif Ürün Sunumu</span>
+                  <span class="hero-slide-overlay-tag">Tam Ekran İncele ↗</span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Verified Telemetry Strip -->
+        <ul class="telemetry-strip" aria-label="Öne çıkan platform metrikleri">
+          <li class="telemetry-card">
+            <span class="telemetry-val">5 Çözüm</span>
+            <span class="telemetry-label">Uçtan Uca Ürün Ailesi</span>
+            <span class="telemetry-sub">CRM, ERP, ASM, DSS &amp; APPO</span>
+          </li>
+          <li class="telemetry-card">
+            <span class="telemetry-val">14 Modül</span>
+            <span class="telemetry-label">Tam Kurumsal Backoffice</span>
+            <span class="telemetry-sub">Web &amp; Masaüstü tek omurga</span>
+          </li>
+          <li class="telemetry-card">
+            <span class="telemetry-val" style="color: var(--opus-emerald);">%100</span>
+            <span class="telemetry-label">Envanter Mutabakatı</span>
+            <span class="telemetry-sub">Stok geçmişi ile birebir: 966 = 966</span>
+          </li>
+          <li class="telemetry-card">
+            <span class="telemetry-val" style="color: var(--opus-cyan);">0 ₺</span>
+            <span class="telemetry-label">El Terminali Maliyeti</span>
+            <span class="telemetry-sub">Telefon kamerasıyla DataMatrix &amp; QR</span>
+          </li>
+          <li class="telemetry-card">
+            <span class="telemetry-val" style="color: var(--opus-amber);">17+ Rapor</span>
+            <span class="telemetry-label">Canlı Karar Destek Gücü</span>
+            <span class="telemetry-sub">MPS, Maliyet, OEE, Fire &amp; Audit Trail</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Çözümlerimiz Section -->
+    <section class="section" id="cozumler">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <div class="eyebrow eyebrow--cyan">Çözümlerimiz • 5 Uzman Platform</div>
+          <h2 class="section-title">Her Sektörel Operasyon İçin Özel Mühendislik Mimarisi</h2>
+          <p class="section-lead">
+            Fabrikanın ilk müşteri teklifinden ham madde kabulüne, üretim hattından satış sonrası yetkili servise; sanat akademilerinden fitness stüdyolarına kadar tüm iş akışları OpusPanel çatısı altında birbirine bağlanır.
+          </p>
+        </header>
+
+        <!-- 5 Solution Interactive Selector Tabs -->
+        <div class="solutions-grid" role="tablist" aria-label="OpusPanel Çözüm Ailesi">
+          <button type="button" class="solution-tab" role="tab" id="tab-crm" aria-selected="false" aria-controls="panel-crm" data-solution="crm" data-accent="violet">
+            <span class="solution-tab-top">
+              <span class="solution-code">OPUS CRM</span>
+              <span class="solution-tab-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+            </span>
+            <span class="solution-tab-title">Satış Kanalı Yönetimi</span>
+            <span class="solution-tab-desc">Fabrikalar için bayi, proje teklif, proforma, fiyat listesi ve sipariş dönüşüm kanalı.</span>
+          </button>
+
+          <button type="button" class="solution-tab" role="tab" id="tab-erp" aria-selected="true" aria-controls="panel-erp" data-solution="erp" data-accent="emerald">
+            <span class="solution-tab-top">
+              <span class="solution-code">OPUS ERP</span>
+              <span class="solution-tab-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </span>
+            </span>
+            <span class="solution-tab-title">Tedarik, Stok &amp; Kalite</span>
+            <span class="solution-tab-desc">14 modüllü Backoffice + kameralı iOS/Android mobil saha, BOM ve 4 aşamalı kalite.</span>
+          </button>
+
+          <button type="button" class="solution-tab" role="tab" id="tab-asm" aria-selected="false" aria-controls="panel-asm" data-solution="asm" data-accent="cyan">
+            <span class="solution-tab-top">
+              <span class="solution-code">OPUS ASM</span>
+              <span class="solution-tab-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </span>
+            </span>
+            <span class="solution-tab-title">Satış Sonrası Hizmet</span>
+            <span class="solution-tab-desc">After-Sales Management: Montaj, kurulum, garanti sicili, yetkili servis ve yedek parça.</span>
+          </button>
+
+          <button type="button" class="solution-tab" role="tab" id="tab-dss" aria-selected="false" aria-controls="panel-dss" data-solution="dss" data-accent="violet">
+            <span class="solution-tab-top">
+              <span class="solution-code">OPUS DSS</span>
+              <span class="solution-tab-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+              </span>
+            </span>
+            <span class="solution-tab-title">Veri Madenciliği &amp; Karar</span>
+            <span class="solution-tab-desc">17+ canlı yönetici raporu, maliyet sapmaları, OEE, fire analizi ve tahminleme kokpiti.</span>
+          </button>
+
+          <button type="button" class="solution-tab" role="tab" id="tab-appo" aria-selected="false" aria-controls="panel-appo" data-solution="appo" data-accent="amber">
+            <span class="solution-tab-top">
+              <span class="solution-code">OPUS APPO</span>
+              <span class="solution-tab-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </span>
+            </span>
+            <span class="solution-tab-title">Randevu &amp; Hakediş</span>
+            <span class="solution-tab-desc">Sanat akademileri, müzik kursları ve fitness eğitmenleri için akıllı takvim &amp; hakediş.</span>
+          </button>
+        </div>
+
+        <!-- Blueprint Tabpanels -->
+        <!-- Panel 1: Opus CRM -->
+        <article class="blueprint-panel" role="tabpanel" id="panel-crm" aria-labelledby="tab-crm" hidden>
+          <div class="blueprint-grid">
+            <div class="blueprint-info">
+              <div class="eyebrow">B2B Fabrika Satış Kanalı • Tekliften Üretime</div>
+              <h3 class="blueprint-title">Opus CRM — Fabrikalar İçin Uçtan Uca Satış Kanalı Yönetimi</h3>
+              <p class="blueprint-summary">
+                Üretici işletmelerin yalnızca fırsat takibi yapan genel CRM araçlarıyla yetinmesini bitirir. Bayi ağından proje teklifine, proformadan kesin satış siparişine ve MRP satınalma tetiklemesine kadar satış ekibini doğrudan fabrikanın stok ve üretim gerçekliğiyle konuşturur.
+              </p>
+              <ul class="blueprint-features">
+                <li><span class="check-mark" aria-hidden="true">✓</span><span>Müşteri teklifi, proforma ve özel fiyat listeleri üzerinden anlık kârlılık ve vade kontrolü.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span>Onaylanan teklifin tek tıkla satış siparişine ve üretim/satınalma MRP ihtiyacına dönüşümü.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span>Sipariş Rezervasyon Koruması (R rozeti) ile müşteriye ayrılan stoğun başka sevkiyata gitmesini önleme.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span>Bölge, bayi ve ürün grubu bazlı ciro performansı, alacak yaşlandırma ve tahsilat takibi.</span></li>
+              </ul>
+              <div class="blueprint-actions">
+                <button type="button" class="btn btn--primary" data-goto-slide="2">Süreç Slaydında Gör (Slayt 02)</button>
+                <a href="#iletisim" class="btn btn--ghost" data-select-demo="Opus CRM">Opus CRM Demosu İste</a>
+              </div>
+            </div>
+            <div class="blueprint-modules-box">
+              <div class="blueprint-modules-heading">Opus CRM Çekirdek Yetenekleri</div>
+              <div class="module-cards">
+                <div class="module-mini">
+                  <div class="module-mini-title">Teklif &amp; Proforma Motoru</div>
+                  <div class="module-mini-text">Hızlı kalem ekleme, iskonto sınırları, döviz/fiyat listesi kuralları ve revizyon geçmişi.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Bayi &amp; Proje Pipeline</div>
+                  <div class="module-mini-text">Bölge müdürlüğü ve endüstriyel proje bazlı fırsat aşamaları ile kazanım oranı takibi.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Stok Kilidi &amp; Termin Sözü</div>
+                  <div class="module-mini-text">Gerçek zamanlı ambar mevcuduna göre kesin teslim tarihi verme ve R rezervasyon kilidi.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Tahsilat &amp; Satış Raporları</div>
+                  <div class="module-mini-text">Müşteri vade riski, siparişten sevkiyata dönüşüm hızı ve iade neden analizleri.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Panel 2: Opus ERP -->
+        <article class="blueprint-panel" role="tabpanel" id="panel-erp" aria-labelledby="tab-erp">
+          <div class="blueprint-grid">
+            <div class="blueprint-info">
+              <div class="eyebrow eyebrow--emerald">Web &amp; Masaüstü Backoffice + iOS &amp; Android Saha</div>
+              <h3 class="blueprint-title">Opus ERP — Tedarik Zinciri, Canlı Stok &amp; 4 Aşamalı Kalite Kontrol</h3>
+              <p class="blueprint-summary">
+                Merkez ofiste 14 kurumsal modülü tek ağaçta sunan Web &amp; Masaüstü Backoffice ile planlayın; sahada pahalı el terminalleri almadan çalışanların telefon kamerasıyla DataMatrix &amp; QR okutup %100 envanter mutabakatı sağlayın.
+              </p>
+              <ul class="blueprint-features">
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>0 ₺ El Terminali Yatırımı:</strong> Android &amp; iOS kamera ile seri okuma, karanlık depo flaşı ve hatalı okuma kilidi.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Kütle Korunumu (ΔQ = 0):</strong> Tek Koli = Tek Lokasyon kuralı ve akıllı alt koli bölme (KL-260418 → KL-260499).</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Canlı İş Emri &amp; BOM Kokpiti:</strong> Hat yeterliliği hesaplama ve tek tuşla MTR eksik malzeme talebi.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>4 Katmanlı Kalite Kalkanı:</strong> Giriş, Üretim İçi, Döngüsel ve Final/Palet muayeneleri + D.Ö.F. süreci.</span></li>
+              </ul>
+              <div class="blueprint-actions">
+                <button type="button" class="btn btn--emerald" data-goto-slide="1">9 Slaytlık Sunumu İncele</button>
+                <a href="#iletisim" class="btn btn--ghost" data-select-demo="Opus ERP">Fabrika Demosu Planla</a>
+              </div>
+            </div>
+            <div class="blueprint-modules-box">
+              <div class="blueprint-modules-heading">14 Kurumsal Departman + Mobil Saha Omurgası</div>
+              <div class="module-cards">
+                <div class="module-mini">
+                  <div class="module-mini-title">Mal Kabul &amp; Parti Etiketi</div>
+                  <div class="module-mini-text">Satınalma siparişiyle birebir kapı kabulü, karantina girişi ve otomatik tekil koli barkodu.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Akıllı Envanter Matrisi</div>
+                  <div class="module-mini-text">Excel Freeze Panes, K (Kalite) &amp; R (Rezervasyon) rozetleri, Çoklu Sekme + Dirty Guard.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">MPS &amp; Hat Besleme</div>
+                  <div class="module-mini-text">Lazer, abkant ve montaj hatlarına sıfır hata transfer; fiili sarf, fire ve OEE akışı.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Muhasebe &amp; İ.S.G.</div>
+                  <div class="module-mini-text">Otomatik tesellüm/sevkiyat aktarımları, stok maliyet defteri, finans ve İ.S.G. yönetimi.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Panel 3: Opus ASM -->
+        <article class="blueprint-panel" role="tabpanel" id="panel-asm" aria-labelledby="tab-asm" hidden>
+          <div class="blueprint-grid">
+            <div class="blueprint-info">
+              <div class="eyebrow eyebrow--cyan">After-Sales Management • Opus ServiceDesk</div>
+              <h3 class="blueprint-title">Opus ASM — Satış Sonrası Montaj, Garanti &amp; Yetkili Servis Ağı</h3>
+              <p class="blueprint-summary">
+                Endüstriyel cihaz ve makine üretiminde marka sadakati sevkiyat kapısında başlar. Opus ASM (After-Sales Management), satılan her ürünü seri numarası üzerinden üretim hattı, hammadde partisi, montaj tutanağı, garanti süresi ve yetkili servis yedek parça tüketimiyle tek merkezde birleştirir.
+              </p>
+              <ul class="blueprint-features">
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Montaj &amp; Kurulum Yönetimi:</strong> Müşteri lokasyonunda kurulum talepleri, saha ekip atama ve dijital teslim tutanakları.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Garanti &amp; Seri No Sicili:</strong> Seri no sorgulandığında ürünün hangi parti sac/komponentle ve hangi hatta üretildiğini saniyede görme.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Yetkili Servis &amp; Bölge Dağıtımı:</strong> Arıza, talep ve şikâyet kayıtlarının bölge yetkili servislerine SLA takipli yönlendirilmesi.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Yedek Parça Maliyet Entegrasyonu:</strong> Sahada değişen rezistans, valf veya modüllerin anlık olarak fabrika stok ve maliyet defterinden düşülmesi.</span></li>
+              </ul>
+              <div class="blueprint-actions">
+                <button type="button" class="btn btn--primary" data-goto-slide="9">Satış Sonrası Slaydını Gör (Slayt 09)</button>
+                <a href="#iletisim" class="btn btn--ghost" data-select-demo="Opus ASM">Opus ASM Demosu İste</a>
+              </div>
+            </div>
+            <div class="blueprint-modules-box">
+              <div class="blueprint-modules-heading">Üretimle Mührünü Koruyan Satış Sonrası Modüller</div>
+              <div class="module-cards">
+                <div class="module-mini">
+                  <div class="module-mini-title">Saha Kurulum &amp; Devreye Alma</div>
+                  <div class="module-mini-text">Fotoğraflı kurulum onayı, müşteri imzalı teslim tutanağı ve otomatik garanti başlangıcı.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Geriye Dönük Parti İzlenebilirliği</div>
+                  <div class="module-mini-text">Seri numarasından tedarikçi parti numarasına kadar kök neden ve garanti kapsam kontrolü.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Servis Masası &amp; SLA</div>
+                  <div class="module-mini-text">Müşteri şikâyet biletleri, müdahale süresi ölçümü ve yetkili servis hak edişleri.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Yedek Parça Stok &amp; Fatura</div>
+                  <div class="module-mini-text">Garanti içi/dışı parça sarfının ERP ambarından düşümü ve otomatik servis maliyetleme.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Panel 4: Opus DSS -->
+        <article class="blueprint-panel" role="tabpanel" id="panel-dss" aria-labelledby="tab-dss" hidden>
+          <div class="blueprint-grid">
+            <div class="blueprint-info">
+              <div class="eyebrow">Decision Support Systems • Veri Madenciliği &amp; İş Zekâsı</div>
+              <h3 class="blueprint-title">Opus DSS — Veri Madenciliği İle Canlı Karar Destek Kokpiti</h3>
+              <p class="blueprint-summary">
+                Günlerce Excel dosyaları birleştirerek geçmişe bakan tahmine dayalı yönetimi sona erdirir. Opus DSS, sahada okutulan her koli, duruş kodu, fire kaydı ve tahsilat hareketi üzerinde veri madenciliği çalıştırarak yöneticilere 17+ canlı stratejik rapor ve erken uyarı sinyalleri sunar.
+              </p>
+              <ul class="blueprint-features">
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Finans, Bütçe &amp; Maliyet Zekâsı (5 Rapor):</strong> Planlanan vs gerçekleşen sapmalar, canlı birim stok maliyeti ve nakit akışı.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Üretim, MPS &amp; Verimlilik Analitiği (5 Rapor):</strong> İstasyon OEE (%92,6), personel/vardiya çıktısı ve fire neden madenciliği.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Tedarik &amp; Ticaret Geçmişi (6 Rapor):</strong> Tedarikçi fiyat trendleri, geciken Backorder riskleri ve satış/iade kalite izi.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Tam Denetim İzi (Audit Trail):</strong> Gerçek kullanıcı adıyla ekran/kayıt değişim tarihçesi ve tek tık Excel/PDF çıktı.</span></li>
+              </ul>
+              <div class="blueprint-actions">
+                <button type="button" class="btn btn--primary" data-goto-slide="6">17+ Rapor Slaydını Gör (Slayt 06)</button>
+                <a href="#iletisim" class="btn btn--ghost" data-select-demo="Opus DSS">Opus DSS Demosu İste</a>
+              </div>
+            </div>
+            <div class="blueprint-modules-box">
+              <div class="blueprint-modules-heading">Yönetici Karar Kokpiti Sütunları</div>
+              <div class="module-cards">
+                <div class="module-mini">
+                  <div class="module-mini-title">Maliyet &amp; Fire Madenciliği</div>
+                  <div class="module-mini-text">Parti bazlı sac/komponent fire maliyet izi (%0,8) ve sapma yapan hat tespiti.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Kapasite &amp; Termin Dengeleme</div>
+                  <div class="module-mini-text">MPS planlı üretim termin başarısı (%98,4) ve darboğaz istasyon projeksiyonu.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Tedarikçi &amp; Nakit Risk İzi</div>
+                  <div class="module-mini-text">Alış fiyat değişimi anomalileri, backorder alarmı ve müşteri tahsilat yaşlandırması.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Cebirsel Mutabakat Denetimi</div>
+                  <div class="module-mini-text">Envanter ile Stok Geçmişi arasındaki farkı sürekli %100 doğrulukta (0,00) izleme.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Panel 5: Opus APPO -->
+        <article class="blueprint-panel" role="tabpanel" id="panel-appo" aria-labelledby="tab-appo" hidden>
+          <div class="blueprint-grid">
+            <div class="blueprint-info">
+              <div class="eyebrow eyebrow--amber">Müzik &amp; Sanat Akademileri • Fitness Eğitmenleri • Randevu &amp; Hakediş</div>
+              <h3 class="blueprint-title">Opus APPO — Akıllı Randevu Takibi &amp; Hakediş Yönetim Platformu</h3>
+              <p class="blueprint-summary">
+                Müzik ve sanat akademileri, resim/enstrüman kursları, birebir çalışan fitness eğitmenleri ve tüm randevulu kurumlar için geliştirilen 3'lü senkron platform: Eğitmen Mobil Uygulaması, Öğrenci Mobil Uygulaması ve Yönetici Web Paneli tek gerçek zamanlı takvimde buluşur.
+              </p>
+              <ul class="blueprint-features">
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Eğitmen Mobil Uygulaması:</strong> Müsait ders saatlerini tek dokunuşla tanımlama ve gelecek tarihlere toplu kopyalama.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Öğrenci Mobil Uygulaması:</strong> Yeşil müsait gün işaretçileriyle anlık randevu seçimi, ders takibi ve şeffaf onay.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Hakediş Yönetim Modülü:</strong> Gerçekleşen dersler, manuel check-in ve tamamlama durumlarına göre otomatik eğitmen hakediş takibi.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Kurumsal Mail &amp; QR Bildirimi:</strong> Randevu anında kurum logosu, harita konumu ve QR kodlu otomatik bilgilendirme.</span></li>
+              </ul>
+              <div class="blueprint-actions">
+                <a href="#opus-appo" class="btn btn--amber">Canlı Demo Videosunu İzle (02:11)</a>
+                <a href="#iletisim" class="btn btn--ghost" data-select-demo="Opus APPO">Akademi / Stüdyo Demosu İste</a>
+              </div>
+            </div>
+            <div class="blueprint-modules-box">
+              <div class="blueprint-modules-heading">Taksim Sanat Canlı Projesinde Kanıtlanan Modüller</div>
+              <div class="module-cards">
+                <div class="module-mini">
+                  <div class="module-mini-title">Randevu Takvimi &amp; Zaman Akışı</div>
+                  <div class="module-mini-text">Aylık doluluk oranı, eğitmen/saat bazlı Gantt çizelgesi ve anlık durum filtreleme.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Hakediş Takibi &amp; Raporlar</div>
+                  <div class="module-mini-text">Tamamlanan ve onaylı ders saatleri üzerinden hatasız eğitmen/salon hakediş hesaplama.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Demo Talepleri &amp; Öğrenci İlerleme</div>
+                  <div class="module-mini-text">Yeni kayıt demo ders talepleri, öğrenci gelişim notları ve branş/eğitim planlama.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">QR Kodlu Otomatik Bildirim</div>
+                  <div class="module-mini-text">Kurum markalı e-posta şablonu, tek tık konum linki ve mobil check-in doğrulama QR'ı.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- İnteraktif Çözüm Slayt Sunumu (PDF -> Interactive Web Slide Deck) -->
+    <section class="section" id="slayt-sunumu">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <div class="eyebrow eyebrow--emerald">İnteraktif Çözüm Sunumu • 9 Slayt</div>
+          <h2 class="section-title">PDF Yerine Canlı Slayt Deneyimiyle Çözüm Mimarimizi Gezin</h2>
+          <p class="section-lead">
+            Endüstriyel mutfak ve üretim tesisleri için hazırladığımız tam ürün sunumunu indirmeye gerek kalmadan slayt slayt inceleyin, çözümlere göre atlayın ve gerçek Backoffice ile mobil ekranları tam ekranda yakınlaştırın.
+          </p>
+        </header>
+
+        <div class="deck-shell">
+          <!-- Presentation Toolbar -->
+          <div class="deck-toolbar">
+            <div class="deck-quick-filters" aria-label="Bölümlere hızlı atla">
+              <button type="button" class="deck-filter-btn" data-jump-slide="1" aria-pressed="true">01 • Genel Omurga</button>
+              <button type="button" class="deck-filter-btn" data-jump-slide="2" aria-pressed="false">02 • 7 Adım Akış</button>
+              <button type="button" class="deck-filter-btn" data-jump-slide="3" aria-pressed="false">03 • Mobil Saha (0 ₺)</button>
+              <button type="button" class="deck-filter-btn" data-jump-slide="4" aria-pressed="false">04 • Üretim &amp; Kalite</button>
+              <button type="button" class="deck-filter-btn" data-jump-slide="5" aria-pressed="false">05 • 14 Modül Grid</button>
+              <button type="button" class="deck-filter-btn" data-jump-slide="6" aria-pressed="false">06–07 • 17+ DSS Rapor</button>
+              <button type="button" class="deck-filter-btn" data-jump-slide="8" aria-pressed="false">08 • ΔQ=0 Mutabakat</button>
+              <button type="button" class="deck-filter-btn" data-jump-slide="9" aria-pressed="false">09 • Satış Sonrası ASM</button>
+            </div>
+
+            <div class="deck-controls">
+              <span class="deck-counter" id="slideCounter" aria-live="polite">01 / 09</span>
+              <button type="button" class="btn btn--ghost btn--sm" id="toggleAutoplayBtn" aria-pressed="false">Otomatik Oynat</button>
+              <button type="button" class="btn btn--primary btn--sm" id="openLightboxBtn">Tam Ekran İncele</button>
+            </div>
+          </div>
+
+          <progress class="deck-progress" id="slideProgress" value="1" max="9" aria-label="Sunum ilerlemesi"></progress>
+
+          <!-- Two-Column Slide Stage + Synchronized Brief -->
+          <div class="deck-stage-grid">
+            <div class="carousel-wrapper">
+              <button type="button" class="carousel-nav-btn carousel-nav-btn--prev" id="prevSlideBtn" aria-label="Önceki slayt">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+
+              <div class="slides-scroller" id="slidesScroller" role="region" aria-roledescription="slayt sunumu" aria-label="Opus ERP Çözüm Slaytları" tabindex="0">
+                <div class="slide-item is-snapped" data-slide-index="1">
+                  <div class="slide-card">
+                    <img src="/assets/slides/slide-01-740.webp" srcset="/assets/slides/slide-01-740.webp 740w, /assets/slides/slide-01-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 1: Opus ERP Backoffice ve Mobil Saha Ekosistemi — Ofisten Sahaya Tek Omurga" width="1487" height="2105" loading="lazy" decoding="async">
+                    <button type="button" class="slide-zoom-btn" data-open-lightbox="1">Yakınlaştır ⤢</button>
+                  </div>
+                </div>
+                <div class="slide-item" data-slide-index="2">
+                  <div class="slide-card">
+                    <img src="/assets/slides/slide-02-740.webp" srcset="/assets/slides/slide-02-740.webp 740w, /assets/slides/slide-02-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 2: Ofiste Planla ve Yönet, Sahada Kamerayla Anında Uygula — 7 Adımlı Süreç Akışı" width="1487" height="2105" loading="lazy" decoding="async">
+                    <button type="button" class="slide-zoom-btn" data-open-lightbox="2">Yakınlaştır ⤢</button>
+                  </div>
+                </div>
+                <div class="slide-item" data-slide-index="3">
+                  <div class="slide-card">
+                    <img src="/assets/slides/slide-03-740.webp" srcset="/assets/slides/slide-03-740.webp 740w, /assets/slides/slide-03-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 3: Pahalı El Terminali Yok — Mevcut Telefon Kamerasıyla DataMatrix ve QR Okuma" width="1487" height="2105" loading="lazy" decoding="async">
+                    <button type="button" class="slide-zoom-btn" data-open-lightbox="3">Yakınlaştır ⤢</button>
+                  </div>
+                </div>
+                <div class="slide-item" data-slide-index="4">
+                  <div class="slide-card">
+                    <img src="/assets/slides/slide-04-740.webp" srcset="/assets/slides/slide-04-740.webp 740w, /assets/slides/slide-04-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 4: Üretimde Tam Kontrol — Canlı İş Emri Kokpiti, Reçete Disiplini ve 4 Aşamalı Kalite" width="1487" height="2105" loading="lazy" decoding="async">
+                    <button type="button" class="slide-zoom-btn" data-open-lightbox="4">Yakınlaştır ⤢</button>
+                  </div>
+                </div>
+                <div class="slide-item" data-slide-index="5">
+                  <div class="slide-card">
+                    <img src="/assets/slides/slide-05-740.webp" srcset="/assets/slides/slide-05-740.webp 740w, /assets/slides/slide-05-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 5: 14 Kurumsal Modül, Akıllı Matris Grid ve Canlı Envanter Ekranı" width="1487" height="2105" loading="lazy" decoding="async">
+                    <button type="button" class="slide-zoom-btn" data-open-lightbox="5">Yakınlaştır ⤢</button>
+                  </div>
+                </div>
+                <div class="slide-item" data-slide-index="6">
+                  <div class="slide-card">
+                    <img src="/assets/slides/slide-06-740.webp" srcset="/assets/slides/slide-06-740.webp 740w, /assets/slides/slide-06-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 6: Tahmine Dayalı Yönetim Biter — 17+ Canlı ERP Yönetici Raporu ve Karar Kokpiti" width="1487" height="2105" loading="lazy" decoding="async">
+                    <button type="button" class="slide-zoom-btn" data-open-lightbox="6">Yakınlaştır ⤢</button>
+                  </div>
+                </div>
+                <div class="slide-item" data-slide-index="7">
+                  <div class="slide-card">
+                    <img src="/assets/slides/slide-07-740.webp" srcset="/assets/slides/slide-07-740.webp 740w, /assets/slides/slide-07-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 7: Her Koli Hareketi Kayıt Altında — Stok Geçmişi ve Envanter 966 = 966 Eşitliği" width="1487" height="2105" loading="lazy" decoding="async">
+                    <button type="button" class="slide-zoom-btn" data-open-lightbox="7">Yakınlaştır ⤢</button>
+                  </div>
+                </div>
+                <div class="slide-item" data-slide-index="8">
+                  <div class="slide-card">
+                    <img src="/assets/slides/slide-08-740.webp" srcset="/assets/slides/slide-08-740.webp 740w, /assets/slides/slide-08-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 8: Mutabakat Mimarisi — Kütle Korunumu ve Tek Koli = Tek Lokasyon Kuralı" width="1487" height="2105" loading="lazy" decoding="async">
+                    <button type="button" class="slide-zoom-btn" data-open-lightbox="8">Yakınlaştır ⤢</button>
+                  </div>
+                </div>
+                <div class="slide-item" data-slide-index="9">
+                  <div class="slide-card">
+                    <img src="/assets/slides/slide-09-740.webp" srcset="/assets/slides/slide-09-740.webp 740w, /assets/slides/slide-09-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 9: Satış Sonrası Montaj, Garanti, Yetkili Servis ve Kurumsal Karşılaştırma" width="1487" height="2105" loading="lazy" decoding="async">
+                    <button type="button" class="slide-zoom-btn" data-open-lightbox="9">Yakınlaştır ⤢</button>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="carousel-nav-btn carousel-nav-btn--next" id="nextSlideBtn" aria-label="Sonraki slayt">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+
+            <!-- Synchronized Executive Slide Brief -->
+            <aside class="slide-brief" aria-live="polite" aria-label="Aktif slayt özeti">
+              <div class="slide-brief-top">
+                <div class="slide-meta-row">
+                  <span class="eyebrow" id="briefTag">01 / 09 • BACKOFFICE + MOBİL EKOSİSTEM</span>
+                  <div class="slide-solution-tags" id="briefSolutions">
+                    <span class="sol-tag">Opus ERP</span>
+                    <span class="sol-tag">Opus DSS</span>
+                  </div>
+                </div>
+
+                <h3 class="slide-brief-title" id="briefTitle">Ofisten Sahaya Tek Omurga</h3>
+                <p class="slide-brief-desc" id="briefSummary">
+                  Merkez ofiste 14 kurumsal modül ve 17+ canlı rapor içeren Web &amp; Masaüstü Backoffice ile planlayın; sahada ise pahalı el terminalleri yerine çalışanların telefon kamerasıyla okutup %100 envanter mutabakatı sağlayın.
+                </p>
+
+                <ul class="slide-highlights" id="briefHighlights">
+                  <li><span class="slide-bullet-dot" aria-hidden="true"></span><span>14 Kurumsal Modül: CRM, MRP, Depo, Üretim, Finans, Muhasebe, Kalite &amp; İ.S.G.</span></li>
+                  <li><span class="slide-bullet-dot" aria-hidden="true"></span><span>0 ₺ El Terminali Maliyeti: Mevcut Android &amp; iOS telefon kamerasıyla saniyede DataMatrix.</span></li>
+                  <li><span class="slide-bullet-dot" aria-hidden="true"></span><span>%100 Envanter Mutabakatı: Stok geçmişi ile birebir eşitlik (966 = 966).</span></li>
+                  <li><span class="slide-bullet-dot" aria-hidden="true"></span><span>17+ Canlı Yönetici Raporu ve aktif hatlarda %92,6 OEE izlenebilirliği.</span></li>
+                </ul>
+              </div>
+
+              <div class="slide-brief-actions">
+                <button type="button" class="btn btn--primary" id="briefZoomBtn">Tam Ekran Yakınlaştır</button>
+                <a href="#iletisim" class="btn btn--ghost" id="briefDemoBtn" data-select-demo="Opus ERP">Bu Çözüm İçin Demo Planla</a>
+              </div>
+            </aside>
+          </div>
+
+          <!-- 9-Slide Thumbnail Strip -->
+          <nav class="slide-thumbs" aria-label="Slayt sayfaları">
+            <button type="button" class="thumb-btn" data-thumb-slide="1" aria-current="true">
+              <span class="thumb-img-wrap"><img src="/assets/slides/slide-01-740.webp" alt="" width="740" height="1047" loading="lazy"></span>
+              <span class="thumb-label">01. Tek Omurga</span>
+            </button>
+            <button type="button" class="thumb-btn" data-thumb-slide="2">
+              <span class="thumb-img-wrap"><img src="/assets/slides/slide-02-740.webp" alt="" width="740" height="1047" loading="lazy"></span>
+              <span class="thumb-label">02. 7 Adım Akış</span>
+            </button>
+            <button type="button" class="thumb-btn" data-thumb-slide="3">
+              <span class="thumb-img-wrap"><img src="/assets/slides/slide-03-740.webp" alt="" width="740" height="1047" loading="lazy"></span>
+              <span class="thumb-label">03. Sıfır Donanım</span>
+            </button>
+            <button type="button" class="thumb-btn" data-thumb-slide="4">
+              <span class="thumb-img-wrap"><img src="/assets/slides/slide-04-740.webp" alt="" width="740" height="1047" loading="lazy"></span>
+              <span class="thumb-label">04. Üretim &amp; Kalite</span>
+            </button>
+            <button type="button" class="thumb-btn" data-thumb-slide="5">
+              <span class="thumb-img-wrap"><img src="/assets/slides/slide-05-740.webp" alt="" width="740" height="1047" loading="lazy"></span>
+              <span class="thumb-label">05. 14 Modül Grid</span>
+            </button>
+            <button type="button" class="thumb-btn" data-thumb-slide="6">
+              <span class="thumb-img-wrap"><img src="/assets/slides/slide-06-740.webp" alt="" width="740" height="1047" loading="lazy"></span>
+              <span class="thumb-label">06. 17+ DSS Rapor</span>
+            </button>
+            <button type="button" class="thumb-btn" data-thumb-slide="7">
+              <span class="thumb-img-wrap"><img src="/assets/slides/slide-07-740.webp" alt="" width="740" height="1047" loading="lazy"></span>
+              <span class="thumb-label">07. 966 = 966 Defter</span>
+            </button>
+            <button type="button" class="thumb-btn" data-thumb-slide="8">
+              <span class="thumb-img-wrap"><img src="/assets/slides/slide-08-740.webp" alt="" width="740" height="1047" loading="lazy"></span>
+              <span class="thumb-label">08. ΔQ=0 Mimari</span>
+            </button>
+            <button type="button" class="thumb-btn" data-thumb-slide="9">
+              <span class="thumb-img-wrap"><img src="/assets/slides/slide-09-740.webp" alt="" width="740" height="1047" loading="lazy"></span>
+              <span class="thumb-label">09. ASM &amp; Demo</span>
+            </button>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal Dialog (<dialog closedby="any">) -->
+    <dialog id="slideLightbox" class="lightbox-dialog" closedby="any" aria-labelledby="lightboxTitle">
+      <div class="lightbox-header">
+        <div class="lightbox-title-wrap">
+          <span class="deck-counter" id="lightboxCounter">01 / 09</span>
+          <h2 class="lightbox-title" id="lightboxTitle">Ofisten Sahaya Tek Omurga</h2>
+        </div>
+        <div class="deck-controls">
+          <button type="button" class="btn btn--ghost btn--sm" id="lightboxZoomToggle" aria-pressed="false">%100 Yakınlaştır</button>
+          <button type="button" class="btn btn--ghost btn--sm" id="lightboxCloseBtn" aria-label="Tam ekran görünümünü kapat">Kapat (Esc)</button>
+        </div>
+      </div>
+
+      <div class="lightbox-body">
+        <img id="lightboxImg" class="lightbox-img" src="/assets/slides/slide-01-1480.webp" alt="Büyütülmüş sunum slaytı" width="1487" height="2105">
+      </div>
+
+      <div class="lightbox-footer">
+        <button type="button" class="btn btn--ghost btn--sm" id="lightboxPrevBtn">← Önceki Slayt</button>
+        <span class="frame-caption">Klavyeden ← / → tuşlarıyla slaytları gezebilir, dışarı tıklayarak kapatabilirsiniz.</span>
+        <button type="button" class="btn btn--primary btn--sm" id="lightboxNextBtn">Sonraki Slayt →</button>
+      </div>
+    </dialog>
+
+    <!-- Opus APPO Video Showcase (Taksim Sanat Demo) -->
+    <section class="section" id="opus-appo">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <div class="eyebrow eyebrow--amber">Opus APPO • Canlı Demo Videosu</div>
+          <h2 class="section-title">Akademiler, Eğitmenler &amp; Stüdyolar İçin Akıllı Randevu ve Hakediş</h2>
+          <p class="section-lead">
+            Özel Taksim Sanat Müzik ve Resim Kursu canlı projesinde çalışan Opus APPO; müzik ve sanat akademileri, birebir fitness eğitmenleri ve randevulu hizmet veren tüm kurumlar için Eğitmen Mobil, Öğrenci Mobil, Yönetici Paneli ve Hakediş Modülünü tek sistemde sunar.
+          </p>
+        </header>
+
+        <div class="appo-showcase">
+          <div class="video-shell">
+            <div class="video-inner">
+              <video
+                id="appoVideo"
+                controls
+                playsinline
+                preload="none"
+                width="1920"
+                height="1080"
+                poster="/assets/appo-demo-poster.webp"
+              >
+                <source src="/videos/OpusPanelDemo.mp4" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor. <a href="/videos/OpusPanelDemo.mp4">Demo videosunu buradan açabilirsiniz.</a>
+              </video>
+            </div>
+          </div>
+
+          <aside class="chapters-panel" aria-label="Video sahne bölümleri">
+            <div class="blueprint-modules-heading">Video Bölümlerine Hızlı Atla</div>
+            <div class="chapters-list">
+              <button type="button" class="chapter-btn" data-seek="10" aria-pressed="false">
+                <span class="chapter-time">00:10</span>
+                <span>
+                  <span class="chapter-title">3'lü Senkron Ekosistem</span>
+                  <span class="chapter-sub">Eğitmen Mobil, Yönetici Web &amp; Öğrenci Mobil yan yana</span>
+                </span>
+              </button>
+              <button type="button" class="chapter-btn" data-seek="26" aria-pressed="false">
+                <span class="chapter-time">00:26</span>
+                <span>
+                  <span class="chapter-title">Eğitmen Müsaitlik &amp; Kopyalama</span>
+                  <span class="chapter-sub">Saat seçimi ve gelecek günlere (+2 gün) kopyalama</span>
+                </span>
+              </button>
+              <button type="button" class="chapter-btn" data-seek="50" aria-pressed="false">
+                <span class="chapter-time">00:50</span>
+                <span>
+                  <span class="chapter-title">Öğrenci Mobil Randevu Akışı</span>
+                  <span class="chapter-sub">Yeşil müsait gün işaretçileri ile anlık ders ayırma</span>
+                </span>
+              </button>
+              <button type="button" class="chapter-btn" data-seek="72" aria-pressed="false">
+                <span class="chapter-time">01:12</span>
+                <span>
+                  <span class="chapter-title">Yönetici Takvimi &amp; Check-In</span>
+                  <span class="chapter-sub">Doluluk oranı, eğitmen/saat zaman çizelgesi ve hakediş izi</span>
+                </span>
+              </button>
+              <button type="button" class="chapter-btn" data-seek="96" aria-pressed="false">
+                <span class="chapter-time">01:36</span>
+                <span>
+                  <span class="chapter-title">Otomatik Mail &amp; QR Bildirimi</span>
+                  <span class="chapter-sub">Kurum logosu, konum linki ve doğrulama QR kodu</span>
+                </span>
+              </button>
+            </div>
+            <a href="/demovideo" class="btn btn--ghost btn--sm">Tam Sayfa Video Görünümüne Git ↗</a>
+          </aside>
+        </div>
+
+        <ul class="appo-pillars" aria-label="Opus APPO kullanım alanları">
+          <li class="pillar-card">
+            <h3>Müzik &amp; Sanat Akademileri</h3>
+            <p>Şan, enstrüman, resim ve atölye branşlarında derslik/eğitmen çakışmasını önleyen planlama, demo talepleri ve öğrenci ilerleme takibi.</p>
+          </li>
+          <li class="pillar-card">
+            <h3>Fitness Eğitmenleri &amp; Stüdyolar</h3>
+            <p>Personal trainer ve stüdyo seansları için saatlik müsaitlik kopyalama, mobil check-in ve üye randevu disiplini.</p>
+          </li>
+          <li class="pillar-card">
+            <h3>Genel Randevu Takip Sistemi</h3>
+            <p>Danışmanlık, klinik veya özel kurs yapılarında tüm şubelerin doluluk oranını ve günlük takvim akışını tek kokpitten izleme.</p>
+          </li>
+          <li class="pillar-card">
+            <h3>Hakediş Yönetim Modülü</h3>
+            <p>Gerçekleşen ve tamamlanan ders/seans saatleri üzerinden otomatik hesaplanan şeffaf eğitmen ve kurum hakediş raporları.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Kurumsal Mühendislik Farkı & Karşılaştırma -->
+    <section class="section" id="kurumsal-fark">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <div class="eyebrow eyebrow--cyan">Kurumsal Mühendislik Standartları</div>
+          <h2 class="section-title">Vitrin Yazılım Değil, Şaşmayan Matematiksel Omurga</h2>
+          <p class="section-lead">
+            OpusPanel çözümleri tahminlere değil; kütle korunumu, tek gerçek kaynak defteri ve sıfır donanım maliyeti ilkelerine göre mühendislik edilir.
+          </p>
+        </header>
+
+        <ul class="principles-grid">
+          <li class="principle-card">
+            <span class="principle-badge">01 • KÜTLE KORUNUMU (ΔQ = 0)</span>
+            <h3>Tek Koli = Tek Lokasyon Yasası</h3>
+            <p class="blueprint-summary">Fiziksel bir koli aynı anda iki rafta görünemez. Binlerce transfer ve parça bölme işleminde dahi hayalet bakiye veya eksi stok oluşmaz; net hareket envanterle daima 966 = 966 eşleşir.</p>
+          </li>
+          <li class="principle-card">
+            <span class="principle-badge">02 • ÇİFT KATMANLI TEK VERİTABANI</span>
+            <h3>Ofiste Derin, Sahada Anlık</h3>
+            <p class="blueprint-summary">Backoffice üzerinde açılan iş emirleri ve satınalma siparişleri saniyeler içinde mobil sahaya canlı rozetlerle düşer; sahadaki her okutma anında finans ve stok defterini günceller.</p>
+          </li>
+          <li class="principle-card">
+            <span class="principle-badge">03 • SIFIR DONANIM KİLİDİ</span>
+            <h3>Mevcut Telefonunuz Yeterli</h3>
+            <p class="blueprint-summary">Pahalı el terminalleri, kırılan ekranlar ve cihaz lisans maliyetleri olmadan çalışanlarınızın iOS &amp; Android telefonlarıyla ilk gün sahaya inin.</p>
+          </li>
+        </ul>
+
+        <div class="table-wrap">
+          <table class="compare-table">
+            <caption>Neden Fabrikalar ve Akademiler OpusPanel Ekosistemine Geçiyor?</caption>
+            <thead>
+              <tr>
+                <th scope="col">Kriter</th>
+                <th scope="col">Geleneksel Yöntem / Parçalı Yazılım</th>
+                <th scope="col" class="col-opus">OpusPanel Ekosistemi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Platform Kapsamı</th>
+                <td class="cell-legacy">Kopuk Excel dosyaları veya birbirini tanımayan ayrı araçlar</td>
+                <td class="cell-opus">CRM, ERP (14 Modül), ASM, DSS ve APPO tek kurumsal mühendislik çatısında</td>
+              </tr>
+              <tr>
+                <th scope="row">Raporlama &amp; DSS</th>
+                <td class="cell-legacy">Manuel birleştirilen geç ve hataya açık haftalık tablolar</td>
+                <td class="cell-opus">17+ Canlı Yönetici Raporu — Bütçe, Maliyet, MPS, OEE, Fire ve Audit Trail</td>
+              </tr>
+              <tr>
+                <th scope="row">Donanım Yatırımı</th>
+                <td class="cell-legacy">Yüksek maliyetli el terminalleri &amp; ek cihaz lisans ücretleri</td>
+                <td class="cell-opus">0 ₺ — Mevcut Android &amp; iOS telefon kamerasıyla seri DataMatrix &amp; QR</td>
+              </tr>
+              <tr>
+                <th scope="row">Stok &amp; Maliyet</th>
+                <td class="cell-legacy">Sayım dönemlerinde ortaya çıkan açıklanamaz bakiye farkları</td>
+                <td class="cell-opus">%100 Mutabakat — Envanter &amp; Stok Geçmişi farkı daima 0,00</td>
+              </tr>
+              <tr>
+                <th scope="row">Kalite &amp; Üretim</th>
+                <td class="cell-legacy">Kâğıt formlar, hat bekleme duruşları ve geç fark edilen hatalar</td>
+                <td class="cell-opus">4 Aşamalı dijital kalite kalkanı + canlı BOM yeterliliği ve tek tuş MTR</td>
+              </tr>
+              <tr>
+                <th scope="row">Satış Sonrası (ASM)</th>
+                <td class="cell-legacy">Üretimden kopuk servis, garanti ve yedek parça takibi</td>
+                <td class="cell-opus">Montaj, seri no parti sicili, yetkili servis ve stoktan düşen yedek parça</td>
+              </tr>
+              <tr>
+                <th scope="row">Randevu &amp; Hakediş (APPO)</th>
+                <td class="cell-legacy">WhatsApp mesajlarıyla yönetilen çakışmalı ders ve manuel hesaplar</td>
+                <td class="cell-opus">Eğitmen + Öğrenci + Yönetici 3'lü senkron takvim, QR mail &amp; otomatik hakediş</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- İletişim & 15 Dakikalık Canlı Demo Planlayıcı -->
+    <section class="section" id="iletisim">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <div class="eyebrow eyebrow--emerald">Canlı Demo &amp; Kurumsal İletişim</div>
+          <h2 class="section-title">15 Dakikalık Canlı Demo İçin Doğrudan İletişime Geçin</h2>
+          <p class="section-lead">
+            İster fabrikanızın ürün reçeteleri ve telefon kameranızla canlı koli okutma akışını, ister akademiniz için Opus APPO randevu &amp; hakediş yapısını kendi verilerinizle test edelim.
+          </p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Doğrudan Mühendislik İletişimi</h3>
+            <p class="blueprint-summary">
+              Projenizin kapsamına göre doğru çözümü birlikte planlamak için doğrudan iletişime geçebilirsiniz.
+            </p>
+            <div class="contact-details">
+              <div class="contact-row">
+                <span class="contact-row-label">Yetkili</span>
+                <span class="contact-row-val">Uğur KILIÇ</span>
+              </div>
+              <div class="contact-row">
+                <span class="contact-row-label">Telefon / WhatsApp</span>
+                <a href="tel:+905322465816" class="contact-row-val">+90 532 246 58 16</a>
+              </div>
+              <div class="contact-row">
+                <span class="contact-row-label">Web</span>
+                <a href="https://www.opuspanel.com/" class="contact-row-val">www.opuspanel.com</a>
+              </div>
+            </div>
+            <div class="hero-actions">
+              <a href="https://wa.me/905322465816" target="_blank" rel="noopener noreferrer" class="btn btn--emerald">WhatsApp'tan Hemen Yaz</a>
+              <a href="tel:+905322465816" class="btn btn--ghost">Telefonla Ara</a>
+            </div>
+          </div>
+
+          <form class="planner-card" id="demoPlannerForm" novalidate>
+            <h3>Kişiselleştirilmiş Demo Özeti Oluştur</h3>
+
+            <fieldset class="field" style="border: 0; padding: 0;">
+              <legend style="font-size: 0.82rem; font-weight: 600; color: var(--ink-secondary); margin-block-end: 0.45rem;">İlgilendiğiniz Çözümler (Birden fazla seçebilirsiniz)</legend>
+              <div class="checkbox-pills" id="solutionCheckboxes">
+                <label class="check-pill"><input type="checkbox" name="solutions" value="Opus CRM">Opus CRM</label>
+                <label class="check-pill"><input type="checkbox" name="solutions" value="Opus ERP" checked>Opus ERP</label>
+                <label class="check-pill"><input type="checkbox" name="solutions" value="Opus ASM">Opus ASM</label>
+                <label class="check-pill"><input type="checkbox" name="solutions" value="Opus DSS">Opus DSS</label>
+                <label class="check-pill"><input type="checkbox" name="solutions" value="Opus APPO">Opus APPO</label>
+              </div>
+            </fieldset>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="companyName">Kurum / Fabrika / Akademi Adı</label>
+                <input type="text" id="companyName" name="companyName" autocomplete="organization" placeholder="Örn: Yılmaz Endüstri veya Sanat Akademisi">
+              </div>
+              <div class="field">
+                <label for="sectorType">Faaliyet Alanı</label>
+                <select id="sectorType" name="sectorType">
+                  <option value="Üretim / Fabrika">Üretim / Fabrika</option>
+                  <option value="Endüstriyel Mutfak / Makine">Endüstriyel Mutfak / Makine</option>
+                  <option value="Müzik &amp; Sanat Akademisi / Kurs">Müzik &amp; Sanat Akademisi / Kurs</option>
+                  <option value="Fitness Stüdyosu / Eğitmen">Fitness Stüdyosu / Eğitmen</option>
+                  <option value="Satış Sonrası Servis / Bayi Ağı">Satış Sonrası Servis / Bayi Ağı</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <span id="briefPreviewLabel" style="font-size: 0.82rem; font-weight: 600; color: var(--ink-secondary);">Hazırlanan Demo Mesajı</span>
+              <output class="brief-preview" id="briefPreview" aria-labelledby="briefPreviewLabel">
+                Merhaba Uğur Bey, Opus ERP çözümü için 15 dakikalık canlı demo planlamak istiyoruz. (Faaliyet alanı: Üretim / Fabrika)
+              </output>
+            </div>
+
+            <div class="planner-actions">
+              <button type="submit" class="btn btn--primary">WhatsApp ile Demo İste</button>
+              <button type="button" class="btn btn--ghost" id="copyBriefBtn">Mesajı Kopyala</button>
+              <span class="copy-status" id="copyStatus" aria-live="polite"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="brand">
+          <span class="brand-emblem">
+            <img src="/assets/opus-emblem.webp" alt="" width="512" height="512" loading="lazy">
+          </span>
+          <span class="brand-copy">
+            <span class="brand-name">OpusPanel</span>
+            <span class="brand-tagline">Over Powered Engineering</span>
+          </span>
+        </a>
+
+        <nav aria-label="Alt menü">
+          <ul class="footer-links">
+            <li><a href="#cozumler">Çözümlerimiz</a></li>
+            <li><a href="#slayt-sunumu">Sunum Slaytları</a></li>
+            <li><a href="#opus-appo">Opus APPO</a></li>
+            <li><a href="/demovideo">Demo Sayfası</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+          </ul>
+        </nav>
+
+        <p class="footer-copy">© 2026 OpusPanel — Tüm Hakları Saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="/app.js"></script>
 </body>
 </html>

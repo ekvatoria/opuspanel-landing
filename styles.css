@@ -1873,6 +1873,117 @@
     font-size: 0.78rem;
     color: var(--ink-faint);
   }
+
+  /* Vertical Switchers & Corporate Bridge Cards (Fabrika <-> Opus APPO) */
+  .gradient-text--amber {
+    background: linear-gradient(125deg var(--in-oklch), #ffffff 10%, #fde68a 52%, #f59e0b 95%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .nav-link--appo {
+    border: 1px solid rgba(251, 191, 36, 0.34);
+    background: rgba(251, 191, 36, 0.08);
+    color: #fde68a;
+    font-weight: 600;
+  }
+
+  .nav-link--appo:hover {
+    border-color: var(--opus-amber);
+    background: rgba(251, 191, 36, 0.16);
+    color: #ffffff;
+  }
+
+  .nav-link--erp {
+    border: 1px solid rgba(167, 139, 250, 0.36);
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--opus-violet-bright);
+    font-weight: 600;
+  }
+
+  .nav-link--erp:hover {
+    border-color: var(--opus-violet-bright);
+    background: rgba(139, 92, 246, 0.2);
+    color: #ffffff;
+  }
+
+  .drawer-switch {
+    margin-block-start: 0.65rem;
+    border: 1px solid rgba(251, 191, 36, 0.36) !important;
+    background: rgba(251, 191, 36, 0.1);
+    color: #fde68a;
+    font-weight: 700;
+  }
+
+  .drawer-switch--erp {
+    border-color: rgba(167, 139, 250, 0.4) !important;
+    background: rgba(139, 92, 246, 0.12);
+    color: var(--opus-violet-bright);
+  }
+
+  .hero-frame--amber {
+    background: linear-gradient(155deg var(--in-oklab), rgba(251, 191, 36, 0.18), rgba(17, 23, 38, 0.94) 50%, rgba(139, 92, 246, 0.14));
+    border-color: rgba(251, 191, 36, 0.36);
+    box-shadow: var(--shadow-card), var(--shadow-glow-amber);
+  }
+
+  .hero-slide-overlay-tag--amber {
+    background: rgba(251, 191, 36, 0.22);
+    border-color: rgba(251, 191, 36, 0.48);
+    color: #fde68a;
+  }
+
+  .vertical-bridge {
+    padding-block: clamp(2.25rem, 4.5vw, 3.5rem);
+  }
+
+  .bridge-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: clamp(1.5rem, 3vw, 2.25rem);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-elevated);
+    box-shadow: var(--shadow-card);
+  }
+
+  .bridge-card--amber {
+    background: linear-gradient(135deg var(--in-oklab), rgba(251, 191, 36, 0.1), rgba(17, 23, 38, 0.96) 55%);
+    border-color: rgba(251, 191, 36, 0.3);
+  }
+
+  .bridge-card--violet {
+    background: linear-gradient(135deg var(--in-oklab), rgba(139, 92, 246, 0.14), rgba(17, 23, 38, 0.96) 55%);
+    border-color: rgba(167, 139, 250, 0.34);
+  }
+
+  .bridge-copy {
+    display: grid;
+    gap: 0.55rem;
+    max-inline-size: 44rem;
+  }
+
+  .bridge-copy h2 {
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.65rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .bridge-copy p {
+    color: var(--ink-secondary);
+    font-size: 0.95rem;
+  }
+
+  .bridge-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+  }
 }
 
 @layer animations {

@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opus APPO — Akademi, Fitness &amp; Kurumlar İçin Randevu ve Hakediş Platformu</title>
+  <meta name="description" content="OpusPanel Opus APPO (Engineering Beyond Limits): Müzik ve sanat akademileri, kurslar, fitness eğitmenleri ve randevulu kurumlar için Eğitmen Mobil, Öğrenci Mobil, Yönetici Takvimi ve Hakediş Yönetim Modülü.">
+  <meta name="theme-color" content="#06080f">
+  <meta property="og:title" content="Opus APPO — Randevu Takibi &amp; Hakediş Platformu | OpusPanel">
+  <meta property="og:description" content="Taksim Sanat canlı projesinde kanıtlanan 3 katmanlı senkron mimari: Eğitmen Mobil, Öğrenci Mobil, Yönetici Paneli ve Otomatik Hakediş.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/appo-demo-poster.webp">
+
+  <link rel="icon" type="image/png" href="/assets/opus-emblem.png">
+  <link rel="apple-touch-icon" href="/assets/opus-emblem.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link visually-hidden">Ana içeriğe geç</a>
+
+  <!-- Fixed Shrinking Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="/appo" class="brand" aria-label="OpusPanel Opus APPO Ana Sayfa">
+        <span class="brand-emblem">
+          <img src="/assets/opus-emblem.webp" alt="" width="512" height="512" decoding="async">
+        </span>
+        <span class="brand-copy">
+          <span class="brand-name">OpusPanel</span>
+          <span class="brand-tagline">Engineering Beyond Limits</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Ana">
+        <ul class="nav-list">
+          <li><a href="#moduller" class="nav-link">Modüller</a></li>
+          <li><a href="#video-demo" class="nav-link">Canlı Video Demo</a></li>
+          <li><a href="#hakedis-mimarisi" class="nav-link">Akış &amp; Hakediş</a></li>
+          <li><a href="#iletisim" class="nav-link">İletişim</a></li>
+          <li><a href="/" class="nav-link nav-link--erp">← Fabrika &amp; ERP</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#iletisim" class="btn btn--amber btn--sm header-demo-btn">Akademi Demosu Planla</a>
+        <button type="button" class="mobile-menu-btn" id="openMobileMenu" aria-label="Menüyü aç" aria-controls="mobileDrawer" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="4" y1="7" x2="20" y2="7"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="17" x2="20" y2="17"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer Dialog -->
+  <dialog id="mobileDrawer" class="mobile-drawer" closedby="any" aria-labelledby="drawerTitle">
+    <div class="drawer-head">
+      <span id="drawerTitle" class="brand-name">Opus APPO Menü</span>
+      <button type="button" class="btn btn--ghost btn--sm" id="closeMobileMenu" aria-label="Menüyü kapat">Kapat</button>
+    </div>
+    <nav aria-label="Mobil">
+      <ul class="drawer-nav">
+        <li><a href="#moduller" data-drawer-link>Opus APPO Modülleri <span>→</span></a></li>
+        <li><a href="#video-demo" data-drawer-link>Taksim Sanat Canlı Video <span>→</span></a></li>
+        <li><a href="#hakedis-mimarisi" data-drawer-link>3'lü Sistem &amp; Hakediş <span>→</span></a></li>
+        <li><a href="#iletisim" data-drawer-link>15 Dk Canlı Demo <span>→</span></a></li>
+        <li><a href="/" class="drawer-switch drawer-switch--erp" data-drawer-link>← Fabrika &amp; ERP Çözümleri <span>↗</span></a></li>
+      </ul>
+    </nav>
+  </dialog>
+
+  <main id="main-content" tabindex="-1">
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="eyebrow eyebrow--amber">
+              <span class="pulse-dot" aria-hidden="true"></span>
+              <span>Opus APPO • Akademi, Fitness &amp; Randevu Ekosistemi</span>
+            </div>
+
+            <h1 class="hero-title">
+              Randevu Takibinden <span class="gradient-text gradient-text--amber">Otomatik Hakedişe</span> 3'lü Senkron Güç
+            </h1>
+
+            <p class="hero-lead">
+              Müzik &amp; sanat akademileri, kurs merkezleri, birebir çalışan fitness eğitmenleri ve tüm randevulu kurumlar için; <strong>Eğitmen Mobil, Öğrenci Mobil ve Yönetici Web Panelini Hakediş Yönetim Modülü</strong> ile canlı takvimde birleştirir.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#video-demo" class="btn btn--amber">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <polygon points="6 4 20 12 6 20 6 4"></polygon>
+                </svg>
+                <span>Canlı Demo Videosunu İzle (02:11)</span>
+              </a>
+              <a href="#iletisim" class="btn btn--ghost">
+                <span>15 Dk Kurum Demosu İste</span>
+              </a>
+            </div>
+
+            <ul class="hero-solution-pills" aria-label="Opus APPO modül kısayolları">
+              <li>
+                <a href="#moduller" class="mini-pill" data-jump-solution="akademi">
+                  <span class="mini-pill-dot" style="background: #fbbf24;" aria-hidden="true"></span>Müzik &amp; Sanat
+                </a>
+              </li>
+              <li>
+                <a href="#moduller" class="mini-pill" data-jump-solution="fitness">
+                  <span class="mini-pill-dot" style="background: #34d399;" aria-hidden="true"></span>Fitness &amp; PT
+                </a>
+              </li>
+              <li>
+                <a href="#moduller" class="mini-pill" data-jump-solution="randevu">
+                  <span class="mini-pill-dot" style="background: #38bdf8;" aria-hidden="true"></span>Genel Randevu
+                </a>
+              </li>
+              <li>
+                <a href="#moduller" class="mini-pill" data-jump-solution="hakedis">
+                  <span class="mini-pill-dot" style="background: #c084fc;" aria-hidden="true"></span>Hakediş Yönetimi
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-stage">
+            <div class="hero-frame hero-frame--amber">
+              <div class="hero-frame-bar">
+                <div class="window-dots" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+                <span class="frame-caption">OPUS APPO • TAKSİM SANAT CANLI DEMO</span>
+              </div>
+              <button type="button" class="hero-slide-trigger" id="heroPlayAppo" aria-label="Taksim Sanat Opus APPO demo videosunu oynat">
+                <img
+                  src="/assets/appo-demo-poster.webp"
+                  alt="Özel Taksim Sanat Müzik ve Resim Kursu için çalışan Opus APPO Yönetici Web Paneli, Eğitmen Mobil ve Öğrenci Mobil ekranları"
+                  width="1600"
+                  height="900"
+                  fetchpriority="high"
+                  loading="eager"
+                  decoding="sync"
+                >
+                <span class="hero-slide-overlay">
+                  <span class="hero-slide-overlay-label">Taksim Sanat Canlı Sistem Videosu (02:11)</span>
+                  <span class="hero-slide-overlay-tag hero-slide-overlay-tag--amber">Videoyu Başlat ▶</span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Academy Telemetry Strip -->
+        <ul class="telemetry-strip" aria-label="Opus APPO öne çıkan yetenekler">
+          <li class="telemetry-card">
+            <span class="telemetry-val" style="color: var(--opus-amber);">3 Ekran</span>
+            <span class="telemetry-label">Gerçek Zamanlı Senkron</span>
+            <span class="telemetry-sub">Eğitmen Mobil, Öğrenci Mobil &amp; Yönetici Web</span>
+          </li>
+          <li class="telemetry-card">
+            <span class="telemetry-val" style="color: var(--opus-emerald);">Hakediş</span>
+            <span class="telemetry-label">Otomatik Eğitmen Puantajı</span>
+            <span class="telemetry-sub">Onaylı ders ve check-in üzerinden net hesap</span>
+          </li>
+          <li class="telemetry-card">
+            <span class="telemetry-val" style="color: var(--opus-cyan);">QR &amp; Mail</span>
+            <span class="telemetry-label">Kurumsal Bildirim Motoru</span>
+            <span class="telemetry-sub">Kurum logosu, harita konumu &amp; doğrulama QR</span>
+          </li>
+          <li class="telemetry-card">
+            <span class="telemetry-val">0 Çakışma</span>
+            <span class="telemetry-label">Akıllı Müsaitlik Yönetimi</span>
+            <span class="telemetry-sub">Saat seçimi, gelecek günlere toplu kopyalama</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Modüller & Kullanım Senaryoları Section -->
+    <section class="section" id="moduller">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <div class="eyebrow eyebrow--amber">Opus APPO • 4 Uzman Modül</div>
+          <h2 class="section-title">Akademiden Stüdyoya Her Randevulu Kuruma Göre Tasarlandı</h2>
+          <p class="section-lead">
+            WhatsApp gruplarında kaybolan ders saatlerine, çakışan salonlara ve Excel'de saatler süren eğitmen hakediş hesaplarına son verin. İhtiyacınıza uygun modülü aşağıdan inceleyin.
+          </p>
+        </header>
+
+        <div class="solutions-grid" role="tablist" aria-label="Opus APPO Modülleri">
+          <button type="button" class="solution-tab" role="tab" id="tab-akademi" aria-selected="true" aria-controls="panel-akademi" data-solution="akademi" data-accent="amber">
+            <span class="solution-tab-top">
+              <span class="solution-code">AKADEMİ</span>
+              <span class="solution-tab-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              </span>
+            </span>
+            <span class="solution-tab-title">Müzik &amp; Sanat Akademisi</span>
+            <span class="solution-tab-desc">Enstrüman, şan, resim kursları için branş/eğitmen takvimi ve öğrenci gelişim takibi.</span>
+          </button>
+
+          <button type="button" class="solution-tab" role="tab" id="tab-fitness" aria-selected="false" aria-controls="panel-fitness" data-solution="fitness" data-accent="emerald">
+            <span class="solution-tab-top">
+              <span class="solution-code">FITNESS</span>
+              <span class="solution-tab-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5 17.5 17.5"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg>
+              </span>
+            </span>
+            <span class="solution-tab-title">Fitness &amp; Birebir Eğitmen</span>
+            <span class="solution-tab-desc">Personal trainer, pilates stüdyoları için saatlik doluluk ve QR check-in disiplini.</span>
+          </button>
+
+          <button type="button" class="solution-tab" role="tab" id="tab-randevu" aria-selected="false" aria-controls="panel-randevu" data-solution="randevu" data-accent="cyan">
+            <span class="solution-tab-top">
+              <span class="solution-code">TAKVİM</span>
+              <span class="solution-tab-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </span>
+            </span>
+            <span class="solution-tab-title">Genel Randevu Takip</span>
+            <span class="solution-tab-desc">Danışmanlık, dil kursu ve çoklu şubeli işletmeler için merkezi zaman çizelgesi.</span>
+          </button>
+
+          <button type="button" class="solution-tab" role="tab" id="tab-hakedis" aria-selected="false" aria-controls="panel-hakedis" data-solution="hakedis" data-accent="violet">
+            <span class="solution-tab-top">
+              <span class="solution-code">HAKEDİŞ</span>
+              <span class="solution-tab-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </span>
+            </span>
+            <span class="solution-tab-title">Hakediş Yönetim Modülü</span>
+            <span class="solution-tab-desc">Tamamlanan ve onaylanan seanslar üzerinden otomatik, tartışmasız eğitmen hak edişi.</span>
+          </button>
+        </div>
+
+        <!-- Tabpanels -->
+        <article class="blueprint-panel" role="tabpanel" id="panel-akademi" aria-labelledby="tab-akademi">
+          <div class="blueprint-grid">
+            <div class="blueprint-info">
+              <div class="eyebrow eyebrow--amber">Özel Taksim Sanat Canlı Kurulumu ile Kanıtlandı</div>
+              <h3 class="blueprint-title">Müzik &amp; Sanat Akademileri İçin Uçtan Uca Yönetim</h3>
+              <p class="blueprint-summary">
+                Özel Taksim Sanat Müzik ve Resim Kursu gibi yoğun branş çeşitliliği olan akademilerde piyano, gitar, şan, keman ve resim dersleri tek zaman çizelgesinde yönetilir; yeni kayıt adaylarının demo ders taleplerinden öğrenci gelişim notlarına kadar her detay kayıt altındadır.
+              </p>
+              <ul class="blueprint-features">
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Eğitmen Müsaitlik Tanımlama &amp; Kopyalama:</strong> Eğitmen boş ders saatlerini mobilden işaretler, tek dokunuşla ileri günlere (+2 gün/hafta) kopyalar.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Öğrenci Mobil Seçim Akışı:</strong> Öğrenciler yalnızca kurumun ve eğitmenin açtığı yeşil müsait günlerden kendi dersini saniyede seçer.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Demo Talepleri &amp; Gelişim Karnesi:</strong> Aday öğrencilerin deneme dersi talepleri ve aktif öğrencilerin haftalık ilerleme notları panele işlenir.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Otomatik Kurum Logolu Bildirim:</strong> Onaylanan her ders için akademi logosu, Google Haritalar konumu ve giriş QR kodu otomatik e-posta olarak iletilir.</span></li>
+              </ul>
+              <div class="blueprint-actions">
+                <a href="#video-demo" class="btn btn--amber">Canlı Akademi Videosunu İzle</a>
+                <a href="#iletisim" class="btn btn--ghost" data-select-demo="Opus APPO Platformu">Akademi Demosu İste</a>
+              </div>
+            </div>
+            <div class="blueprint-modules-box">
+              <div class="blueprint-modules-heading">Akademi Yönetim Paneli Modülleri</div>
+              <div class="module-cards">
+                <div class="module-mini">
+                  <div class="module-mini-title">Günlük Takvim &amp; Doluluk</div>
+                  <div class="module-mini-text">Saat/eğitmen bazlı Gantt çizelgesi ile sınıf ve eğitmen doluluk oranını anlık izleme.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Branş &amp; Kurs Programlama</div>
+                  <div class="module-mini-text">Birebir enstrüman, grup atölye ve konservatuvar hazırlık paketleri.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Demo Ders Yönetimi</div>
+                  <div class="module-mini-text">Web ve sosyal medyadan gelen deneme dersi taleplerinin kesin kayda dönüşümü.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">QR Check-In &amp; Yoklama</div>
+                  <div class="module-mini-text">Öğrenci derse girdiğinde QR okutarak katılımları otomatik mühürleme.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="blueprint-panel" role="tabpanel" id="panel-fitness" aria-labelledby="tab-fitness" hidden>
+          <div class="blueprint-grid">
+            <div class="blueprint-info">
+              <div class="eyebrow eyebrow--emerald">Personal Trainer &amp; Reformer Stüdyoları</div>
+              <h3 class="blueprint-title">Fitness Eğitmenleri &amp; Stüdyolar İçin Akıllı Seans Takibi</h3>
+              <p class="blueprint-summary">
+                Birebir antrenman ve reformer pilates stüdyolarında telefon trafiğini sıfırlar. Üyeler mobil uygulamadan antrenörün müsait saatini görerek kendi randevusunu ayırır; antrenör ve stüdyo yöneticisi günlük seans listesini anlık takip eder.
+              </p>
+              <ul class="blueprint-features">
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Anlık Paket &amp; Seans Kontrolü:</strong> Üyenin kalan seans hakkı dolduğunda veya iptal penceresi geçtiğinde sistem kuralları otomatik işletir.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Antrenör Telefonunda Anında Plan:</strong> Eğitmen hafta sonu çalışacağı saatleri açıp tek tıkla ayın diğer haftalarına çoğaltır.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Geldi / Gelmedi / Tamamlandı Durumu:</strong> Manuel check-in veya kapı QR okutmasıyla seans gerçekleşme durumu kesinleşir.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>PT Hakedişine Doğrudan Akış:</strong> İptal edilen veya yapılmayan dersler karışmaz; yalnızca gerçekleşen seanslar hakedişe yansır.</span></li>
+              </ul>
+              <div class="blueprint-actions">
+                <a href="#video-demo" class="btn btn--emerald">Eğitmen Akışını Videoda Gör (00:26)</a>
+                <a href="#iletisim" class="btn btn--ghost" data-select-demo="Eğitmen &amp; Öğrenci Mobil App">Stüdyo Demosu İste</a>
+              </div>
+            </div>
+            <div class="blueprint-modules-box">
+              <div class="blueprint-modules-heading">Stüdyo &amp; PT Sahası Yetenekleri</div>
+              <div class="module-cards">
+                <div class="module-mini">
+                  <div class="module-mini-title">Hızlı Müsaitlik Şablonu</div>
+                  <div class="module-mini-text">Antrenör yoğunluk saatlerine göre esnek 30/45/60 dakikalık slot üretimi.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Üye Kendi Kendine Randevu</div>
+                  <div class="module-mini-text">Gece yarısı bile WhatsApp yazışması olmadan ertesi güne boş seans ayırtma.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Antrenör &amp; Stüdyo Payı</div>
+                  <div class="module-mini-text">Birebir ve düet seanslar için farklı prim/hakediş oranları tanımlama.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Konum &amp; Hatırlatma Bildirimi</div>
+                  <div class="module-mini-text">Seans onayında stüdyo adresi, harita linki ve QR bilet otomatik gönderimi.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="blueprint-panel" role="tabpanel" id="panel-randevu" aria-labelledby="tab-randevu" hidden>
+          <div class="blueprint-grid">
+            <div class="blueprint-info">
+              <div class="eyebrow eyebrow--cyan">Merkezi Operasyon Kokpiti • Genel Randevu Sistemi</div>
+              <h3 class="blueprint-title">Çoklu Oda, Uzman &amp; Şube İçin Çakışmasız Randevu Takvimi</h3>
+              <p class="blueprint-summary">
+                Özel eğitim kurumları, dil kursları, danışmanlık ofisleri veya randevuyla hizmet veren tüm işletmeler için tasarlanmış yönetim ekranı: tüm uzmanların günlük akışı renkli statü etiketleriyle tek ekranda görünür.
+              </p>
+              <ul class="blueprint-features">
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Zaman Çizelgesi &amp; Durum Filtreleme:</strong> Onaylandı, Beklemede, Check-in Yapıldı veya Tamamlandı statüleriyle anlık filtreleme.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Rol Bazlı Güvenli Yetkilendirme:</strong> Yönetici tüm şube/odaları görürken, her uzman yalnızca kendi takvimini ve hakedişini izler.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Tek Tık Manuel Düzenleme:</strong> Acil durumda yönetici panelden ders saatini kaydırabilir veya yedek eğitmen atayabilir.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Markalı Bildirim Şablonu:</strong> Kurum logosu ve kimliğiyle özelleşmiş profesyonel e-posta onayları.</span></li>
+              </ul>
+              <div class="blueprint-actions">
+                <a href="#video-demo" class="btn btn--primary">Yönetici Takvimini Gör (01:12)</a>
+                <a href="#iletisim" class="btn btn--ghost" data-select-demo="QR Bildirim &amp; Demo Takibi">Kurumsal Takvim Demosu İste</a>
+              </div>
+            </div>
+            <div class="blueprint-modules-box">
+              <div class="blueprint-modules-heading">Yönetim Paneli Kontrol Araçları</div>
+              <div class="module-cards">
+                <div class="module-mini">
+                  <div class="module-mini-title">Çakışma Engelleyici Motor</div>
+                  <div class="module-mini-text">Aynı eğitmen, aynı üye veya aynı derslik için eşzamanlı çift rezervasyon kilidi.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Aylık &amp; Günlük Doluluk Analizi</div>
+                  <div class="module-mini-text">Hangi gün ve saatlerin verimli, hangi slotların boş kaldığını görsel izleme.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">Öğrenci / Danışan Kartı</div>
+                  <div class="module-mini-text">Geçmiş tüm randevular, gelişim notları ve iletişim bilgileri tek pencerede.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">İzole Kurum Omurgası</div>
+                  <div class="module-mini-text">Her kurumun verisi kendi izole veritabanında yüksek hız ve gizlilikle saklanır.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="blueprint-panel" role="tabpanel" id="panel-hakedis" aria-labelledby="tab-hakedis" hidden>
+          <div class="blueprint-grid">
+            <div class="blueprint-info">
+              <div class="eyebrow">Otomatik Finans &amp; Prim Hesabı • Sıfır Tartışma</div>
+              <h3 class="blueprint-title">Hakediş Yönetim Modülü — Şeffaf ve Hatasız Ay Sonu Kapanışı</h3>
+              <p class="blueprint-summary">
+                Akademilerde ve spor stüdyolarında en çok zaman alan ve itiraza açık konu olan ay sonu eğitmen ödemelerini takvime doğrudan bağlar. Yapılan her check-in ve onaylanan her seans anında eğitmen hakediş defterine işlenir.
+              </p>
+              <ul class="blueprint-features">
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Check-In &amp; Tamamlama Bağlı Hesap:</strong> Yalnızca QR ile doğrulanan veya yönetici/eğitmen tarafından onaylanan dersler hakediş üretir.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Eğitmen &amp; Tarih Aralığı Bazlı Rapor:</strong> İstenen iki tarih arasındaki toplam ders sayısı, birim bedel ve net ödeme tutarı saniyede listelenir.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Karşılıklı Şeffaflık:</strong> Hem kurum yönetimi hem eğitmen kendi tamamladığı ders dökümünü net şekilde takip edebilir.</span></li>
+                <li><span class="check-mark" aria-hidden="true">✓</span><span><strong>Kâğıt Puantaj &amp; Excel'e Son:</strong> Defter tutma, WhatsApp geçmişi tarama ve eksik/fazla saat tartışmaları ortadan kalkar.</span></li>
+              </ul>
+              <div class="blueprint-actions">
+                <a href="#video-demo" class="btn btn--primary">Hakediş İzini Videoda Gör</a>
+                <a href="#iletisim" class="btn btn--ghost" data-select-demo="Hakediş Yönetim Modülü">Hakediş Modülü Demosu İste</a>
+              </div>
+            </div>
+            <div class="blueprint-modules-box">
+              <div class="blueprint-modules-heading">Hakediş Disiplini İş Akışı</div>
+              <div class="module-cards">
+                <div class="module-mini">
+                  <div class="module-mini-title">1. Gerçekleşen Ders Kanıtı</div>
+                  <div class="module-mini-text">QR doğrulama veya panel check-in onayı olmadan ders hakediş havuzuna girmez.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">2. Branş / Ders Tipi Esnekliği</div>
+                  <div class="module-mini-text">Birebir ders, deneme dersi veya grup seansı için kurum kurallarına uygun izleme.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">3. Anlık Dönem Özeti</div>
+                  <div class="module-mini-text">Ay ortasında bile hangi eğitmenin kaç ders tamamladığı anlık raporlanır.</div>
+                </div>
+                <div class="module-mini">
+                  <div class="module-mini-title">4. Denetlenebilir Tarihçe</div>
+                  <div class="module-mini-text">Her randevu değişikliği, iptal zamanı ve onaylayan kişi kayıt altında kalır.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Taksim Sanat Canlı Demo Videosu -->
+    <section class="section" id="video-demo">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <div class="eyebrow eyebrow--amber">Canlı Sistem Demosu • Özel Taksim Sanat Projesi</div>
+          <h2 class="section-title">Gerçek Sistemin Sahadaki Çalışmasını 2 Dakikada İzleyin</h2>
+          <p class="section-lead">
+            Aşağıdaki videoda Eğitmen Mobil Uygulaması, Öğrenci Mobil Uygulaması ve Yönetici Web Panelinin gerçek zamanlı olarak nasıl haberleştiğini ve randevudan hakediş izine kadar tüm adımları görebilirsiniz.
+          </p>
+        </header>
+
+        <div class="appo-showcase">
+          <div class="video-shell">
+            <div class="video-inner">
+              <video
+                id="appoVideo"
+                controls
+                playsinline
+                preload="none"
+                width="1920"
+                height="1080"
+                poster="/assets/appo-demo-poster.webp"
+              >
+                <source src="/videos/OpusPanelDemo.mp4" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor. <a href="/videos/OpusPanelDemo.mp4">Demo videosunu buradan açabilirsiniz.</a>
+              </video>
+            </div>
+          </div>
+
+          <aside class="chapters-panel" aria-label="Video sahne bölümleri">
+            <div class="blueprint-modules-heading">Video Bölümlerine Hızlı Atla</div>
+            <div class="chapters-list">
+              <button type="button" class="chapter-btn" data-seek="10" aria-pressed="false">
+                <span class="chapter-time">00:10</span>
+                <span>
+                  <span class="chapter-title">3'lü Senkron Ekosistem</span>
+                  <span class="chapter-sub">Eğitmen Mobil, Yönetici Web &amp; Öğrenci Mobil yan yana</span>
+                </span>
+              </button>
+              <button type="button" class="chapter-btn" data-seek="26" aria-pressed="false">
+                <span class="chapter-time">00:26</span>
+                <span>
+                  <span class="chapter-title">Eğitmen Müsaitlik &amp; Kopyalama</span>
+                  <span class="chapter-sub">Saat seçimi ve gelecek günlere (+2 gün) kopyalama</span>
+                </span>
+              </button>
+              <button type="button" class="chapter-btn" data-seek="50" aria-pressed="false">
+                <span class="chapter-time">00:50</span>
+                <span>
+                  <span class="chapter-title">Öğrenci Mobil Randevu Akışı</span>
+                  <span class="chapter-sub">Yeşil müsait gün işaretçileri ile anlık ders ayırma</span>
+                </span>
+              </button>
+              <button type="button" class="chapter-btn" data-seek="72" aria-pressed="false">
+                <span class="chapter-time">01:12</span>
+                <span>
+                  <span class="chapter-title">Yönetici Takvimi &amp; Check-In</span>
+                  <span class="chapter-sub">Doluluk oranı, eğitmen/saat zaman çizelgesi ve hakediş izi</span>
+                </span>
+              </button>
+              <button type="button" class="chapter-btn" data-seek="96" aria-pressed="false">
+                <span class="chapter-time">01:36</span>
+                <span>
+                  <span class="chapter-title">Otomatik Mail &amp; QR Bildirimi</span>
+                  <span class="chapter-sub">Kurum logosu, konum linki ve doğrulama QR kodu</span>
+                </span>
+              </button>
+            </div>
+            <a href="/demovideo" class="btn btn--ghost btn--sm">Tam Sayfa Video Görünümüne Git ↗</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mimari Fark & Karşılaştırma -->
+    <section class="section" id="hakedis-mimarisi">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <div class="eyebrow eyebrow--cyan">OpusPanel Mühendislik Standardı</div>
+          <h2 class="section-title">Basit Takvim Eklentisi Değil, Tam Kurumsal Operasyon Omurgası</h2>
+          <p class="section-lead">
+            Opus APPO; WhatsApp mesajları, dağınık Google Takvimler ve manuel Excel çizelgeleri arasında sıkışan kurumlara endüstriyel disiplin kazandırır.
+          </p>
+        </header>
+
+        <ul class="principles-grid">
+          <li class="principle-card">
+            <span class="principle-badge">01 • TEK VERİ OMURGASI</span>
+            <h3>Üç Ayrı Uygulama, Sıfır Gecikme</h3>
+            <p class="blueprint-summary">Her kurum kendi izole veri omurgasında çalışır. Eğitmenin mobilden açtığı saat milisaniyeler içinde öğrencinin takvimine ve yöneticinin zaman çizelgesine düşer.</p>
+          </li>
+          <li class="principle-card">
+            <span class="principle-badge">02 • ÇAKIŞMA VE UNUTMAYA KİLİT</span>
+            <h3>Kurum İmajınızı Koruyan Otomasyon</h3>
+            <p class="blueprint-summary">Özel kurum logolu e-posta, tek tık Google Haritalar yol tarifi ve giriş QR kodu ile öğrenciye ilk andan itibaren kurumsal güven sunar.</p>
+          </li>
+          <li class="principle-card">
+            <span class="principle-badge">03 • DOĞRULANMIŞ HAKEDİŞ</span>
+            <h3>Check-In ile Kanıtlanmış Puantaj</h3>
+            <p class="blueprint-summary">Ay sonunda kâğıt imzalatma veya mesaj geriye tarama biter; check-in ve tamamlama onayı alan her seans şeffaf hakediş raporuna dönüşür.</p>
+          </li>
+        </ul>
+
+        <div class="table-wrap">
+          <table class="compare-table">
+            <caption>Neden Akademiler ve Stüdyolar Opus APPO'ya Geçiyor?</caption>
+            <thead>
+              <tr>
+                <th scope="col">Operasyon Adımı</th>
+                <th scope="col">WhatsApp &amp; Excel Yönetimi</th>
+                <th scope="col" class="col-opus">Opus APPO Platformu</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Eğitmen Müsaitliği</th>
+                <td class="cell-legacy">Her hafta telefondan mesajlaşarak tek tek sorulan boş saatler</td>
+                <td class="cell-opus">Eğitmen mobilinden saat seçimi ve gelecek günlere (+2 gün) kopyalama</td>
+              </tr>
+              <tr>
+                <th scope="row">Öğrenci Randevusu</th>
+                <td class="cell-legacy">Gecikmeli geri dönüşler ve yanlış güne yazılan çift randevular</td>
+                <td class="cell-opus">Yeşil müsait gün işaretçileri ile mobilden 7/24 çakışmasız seçim</td>
+              </tr>
+              <tr>
+                <th scope="row">Onay &amp; Adres Paylaşımı</th>
+                <td class="cell-legacy">Her öğrenciye manuel atılan konum ve hatırlatma mesajları</td>
+                <td class="cell-opus">Kurum logolu otomatik mail, harita konumu ve check-in QR kodu</td>
+              </tr>
+              <tr>
+                <th scope="row">Ders Takibi &amp; Check-In</th>
+                <td class="cell-legacy">Kâğıt deftere işlenen ve unutulan yoklamalar</td>
+                <td class="cell-opus">QR / manuel check-in ile canlı yönetici zaman çizelgesi ve statü takibi</td>
+              </tr>
+              <tr>
+                <th scope="row">Ay Sonu Hakediş</th>
+                <td class="cell-legacy">Saatler süren Excel hesaplaması ve eksik/fazla ders tartışmaları</td>
+                <td class="cell-opus">Onaylı ve tamamlanmış seanslardan otomatik üretilen şeffaf hakediş defteri</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- İletişim & 15 Dakikalık Opus APPO Demo Planlayıcı -->
+    <section class="section" id="iletisim">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <div class="eyebrow eyebrow--amber">Canlı Demo &amp; Kurumsal İletişim</div>
+          <h2 class="section-title">Akademiniz veya Stüdyonuz İçin 15 Dakikalık Demo Planlayın</h2>
+          <p class="section-lead">
+            Kurum logonuz, eğitmen kadronuz ve ders/seans yapınıza göre Opus APPO'nun mobilde ve yönetim panelinde nasıl çalıştığını birlikte canlı görelim.
+          </p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Doğrudan Kurum İletişimi</h3>
+            <p class="blueprint-summary">
+              Kurulum, kurum kimliği uyarlama ve canlı demo talepleriniz için doğrudan ulaşabilirsiniz.
+            </p>
+            <div class="contact-details">
+              <div class="contact-row">
+                <span class="contact-row-label">Yetkili</span>
+                <span class="contact-row-val">Uğur KILIÇ</span>
+              </div>
+              <div class="contact-row">
+                <span class="contact-row-label">Telefon / WhatsApp</span>
+                <a href="tel:+905322465816" class="contact-row-val">+90 532 246 58 16</a>
+              </div>
+              <div class="contact-row">
+                <span class="contact-row-label">Web</span>
+                <a href="https://www.opuspanel.com/" class="contact-row-val">www.opuspanel.com</a>
+              </div>
+            </div>
+            <div class="hero-actions">
+              <a href="https://wa.me/905322465816" target="_blank" rel="noopener noreferrer" class="btn btn--emerald">WhatsApp'tan Hemen Yaz</a>
+              <a href="tel:+905322465816" class="btn btn--ghost">Telefonla Ara</a>
+            </div>
+          </div>
+
+          <form class="planner-card" id="demoPlannerForm" data-default-product="Opus APPO Platformu" novalidate>
+            <h3>Kişiselleştirilmiş Demo Özeti Oluştur</h3>
+
+            <fieldset class="field" style="border: 0; padding: 0;">
+              <legend style="font-size: 0.82rem; font-weight: 600; color: var(--ink-secondary); margin-block-end: 0.45rem;">Öncelikli İhtiyaçlarınız (Birden fazla seçebilirsiniz)</legend>
+              <div class="checkbox-pills" id="solutionCheckboxes">
+                <label class="check-pill"><input type="checkbox" name="solutions" value="Opus APPO Platformu" checked>Opus APPO Platformu</label>
+                <label class="check-pill"><input type="checkbox" name="solutions" value="Hakediş Yönetim Modülü" checked>Hakediş Yönetim Modülü</label>
+                <label class="check-pill"><input type="checkbox" name="solutions" value="Eğitmen &amp; Öğrenci Mobil App">Eğitmen &amp; Öğrenci Mobil App</label>
+                <label class="check-pill"><input type="checkbox" name="solutions" value="QR Bildirim &amp; Demo Takibi">QR Bildirim &amp; Demo Takibi</label>
+              </div>
+            </fieldset>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="companyName">Kurum / Akademi / Stüdyo Adı</label>
+                <input type="text" id="companyName" name="companyName" autocomplete="organization" placeholder="Örn: Taksim Sanat veya Balance Pilates">
+              </div>
+              <div class="field">
+                <label for="sectorType">Faaliyet Alanı</label>
+                <select id="sectorType" name="sectorType">
+                  <option value="Müzik &amp; Sanat Akademisi / Kurs">Müzik &amp; Sanat Akademisi / Kurs</option>
+                  <option value="Fitness Stüdyosu / Birebir Eğitmen">Fitness Stüdyosu / Birebir Eğitmen</option>
+                  <option value="Özel Ders &amp; Kurs Merkezi">Özel Ders &amp; Kurs Merkezi</option>
+                  <option value="Danışmanlık / Randevulu Hizmet">Danışmanlık / Randevulu Hizmet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <span id="briefPreviewLabel" style="font-size: 0.82rem; font-weight: 600; color: var(--ink-secondary);">Hazırlanan Demo Mesajı</span>
+              <output class="brief-preview" id="briefPreview" aria-labelledby="briefPreviewLabel">
+                Merhaba Uğur Bey, Opus APPO Platformu, Hakediş Yönetim Modülü için 15 dakikalık canlı demo planlamak istiyoruz. (Faaliyet alanı: Müzik &amp; Sanat Akademisi / Kurs)
+              </output>
+            </div>
+
+            <div class="planner-actions">
+              <button type="submit" class="btn btn--amber">WhatsApp ile Demo İste</button>
+              <button type="button" class="btn btn--ghost" id="copyBriefBtn">Mesajı Kopyala</button>
+              <span class="copy-status" id="copyStatus" aria-live="polite"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other Vertical Bridge: Industrial Factory Suite -->
+    <section class="section vertical-bridge" aria-label="OpusPanel Fabrika ve Endüstriyel Çözümleri">
+      <div class="container">
+        <div class="bridge-card bridge-card--violet">
+          <div class="bridge-copy">
+            <div class="eyebrow">OpusPanel Endüstriyel Üretim Ekosistemi</div>
+            <h2>Üretim Yapan Bir Fabrika veya Endüstriyel İşletme misiniz?</h2>
+            <p>
+              Fabrikalar için satış kanalından (CRM) 14 modüllü ERP'ye, Satış Sonrası Hizmet (ASM) ağından veri madenciliği tabanlı Karar Destek (DSS) kokpitine uzanan endüstriyel platformumuzu inceleyin.
+            </p>
+          </div>
+          <div class="bridge-actions">
+            <a href="/" class="btn btn--primary">← Fabrika &amp; ERP Çözümlerine Git</a>
+            <a href="/#slayt-sunumu" class="btn btn--ghost">9 Slaytlık ERP Sunumunu Gör</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/appo" class="brand">
+          <span class="brand-emblem">
+            <img src="/assets/opus-emblem.webp" alt="" width="512" height="512" loading="lazy">
+          </span>
+          <span class="brand-copy">
+            <span class="brand-name">OpusPanel</span>
+            <span class="brand-tagline">Engineering Beyond Limits</span>
+          </span>
+        </a>
+
+        <nav aria-label="Alt menü">
+          <ul class="footer-links">
+            <li><a href="#moduller">Modüller</a></li>
+            <li><a href="#video-demo">Canlı Video Demo</a></li>
+            <li><a href="#hakedis-mimarisi">Akış &amp; Hakediş</a></li>
+            <li><a href="/">Fabrika &amp; ERP</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+          </ul>
+        </nav>
+
+        <p class="footer-copy">© 2026 OpusPanel — Engineering Beyond Limits.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="/app.js"></script>
+</body>
+</html>

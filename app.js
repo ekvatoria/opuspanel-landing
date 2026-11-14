@@ -153,7 +153,7 @@
       tag: '02 / 09 • UÇTAN UCA SÜREÇ AKIŞI',
       title: 'Ofiste Planla & Yönet, Sahada Kamerayla Uygula',
       summary:
-        'Opus ERP yalnızca bir mobil uygulama değildir. Müşteri teklifi ve satınalma siparişinden mal kabule, 4 aşamalı kaliteden üretim iş emirlerine, sevkiyat ve satış sonrası yetkili servise kadar 7 adımı tek veritabanında birleştirir.',
+        'Opus ERP yalnızca bir mobil uygulama değildir. Müşteri teklifi ve satınalma siparişinden mal kabule, 4 aşamalı kaliteden üretim iş emirlerine, sevkiyat ve satış sonrası yetkili servise kadar 7 adımı tek veri omurgası üzerinde iki operasyon katmanıyla birleştirir.',
       solutions: ['Opus CRM', 'Opus ERP', 'Opus ASM'],
       primaryDemo: 'Opus CRM',
       highlights: [
@@ -607,6 +607,11 @@
     appoVideo.addEventListener('timeupdate', () => {
       syncChapterState(appoVideo.currentTime);
     });
+
+    document.getElementById('heroPlayAppo')?.addEventListener('click', () => {
+      document.getElementById('video-demo')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      appoVideo.play().catch(() => {});
+    });
   }
 
   /* ------------------------------------------------------------------------
@@ -627,8 +632,9 @@
       .filter((cb) => cb.checked)
       .map((cb) => cb.value);
 
-    const productText =
-      selected.length > 0 ? selected.join(', ') : 'OpusPanel çözümleri';
+    const fallbackProduct =
+      demoForm?.dataset.defaultProduct || 'OpusPanel çözümleri';
+    const productText = selected.length > 0 ? selected.join(', ') : fallbackProduct;
 
     const company = companyInput?.value.trim();
     const sector = sectorSelect?.value || 'Üretim / Fabrika';
@@ -653,11 +659,12 @@
       const trigger = event.target.closest('[data-select-demo]');
       if (!trigger) return;
       const targetProduct = trigger.dataset.selectDemo;
-      solutionCheckboxes.forEach((cb) => {
-        cb.checked = cb.value === targetProduct;
-      });
-      if (targetProduct === 'Opus APPO' && sectorSelect) {
-        sectorSelect.value = 'Müzik & Sanat Akademisi / Kurs';
+      if (solutionCheckboxes.length > 0) {
+        solutionCheckboxes.forEach((cb) => {
+          cb.checked = cb.value === targetProduct;
+        });
+      } else if (targetProduct) {
+        demoForm.dataset.defaultProduct = targetProduct;
       }
       updateBriefPreview();
     });

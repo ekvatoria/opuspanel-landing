@@ -102,8 +102,11 @@
                   <path d="m12 5 7 7-7 7"></path>
                 </svg>
               </a>
+              <a href="/assets/OpusPanel-ERP-Tanitim-Katalogu.pdf" download="OpusPanel-ERP-Tanitim-Katalogu.pdf" class="btn btn--emerald">
+                <span>PDF Kataloğu İndir (4,2 MB) ↓</span>
+              </a>
               <a href="#iletisim" class="btn btn--ghost">
-                <span>15 Dk Fabrika Demosu İste</span>
+                <span>15 Dk Demo İste</span>
               </a>
             </div>
 
@@ -139,21 +142,21 @@
                 </div>
                 <span class="frame-caption">OPUS SUITE • BACKOFFICE + MOBİL SAHA</span>
               </div>
-              <button type="button" class="hero-slide-trigger" id="heroOpenDeck" aria-label="Opus ERP kurumsal sunumunu tam ekran incele">
+              <button type="button" class="hero-slide-trigger" id="heroOpenDeck" aria-label="Opus ERP kurumsal sunumunu okuma modunda incele">
                 <img
-                  src="/assets/slides/slide-01-740.webp"
-                  srcset="/assets/slides/slide-01-740.webp 740w, /assets/slides/slide-01-1480.webp 1480w"
-                  sizes="(max-width: 960px) 92vw, 42vw"
+                  src="/assets/slides/slide-01-1480.webp"
+                  srcset="/assets/slides/slide-01-740.webp 740w, /assets/slides/slide-01-1480.webp 1487w, /assets/slides/slide-01-2230.webp 2231w"
+                  sizes="(max-width: 960px) 92vw, 44vw"
                   alt="OpusPanel Opus ERP Backoffice ve iOS Android mobil saha ekranları genel görünümü"
-                  width="1487"
-                  height="2105"
+                  width="2231"
+                  height="3157"
                   fetchpriority="high"
                   loading="eager"
                   decoding="sync"
                 >
                 <span class="hero-slide-overlay">
                   <span class="hero-slide-overlay-label">9 Slaytlık İnteraktif Ürün Sunumu</span>
-                  <span class="hero-slide-overlay-tag">Tam Ekran İncele ↗</span>
+                  <span class="hero-slide-overlay-tag">Okuma Modunda Aç ⤢</span>
                 </span>
               </button>
             </div>
@@ -432,10 +435,10 @@
     <section class="section" id="slayt-sunumu">
       <div class="container">
         <header class="section-header reveal-on-scroll">
-          <div class="eyebrow eyebrow--emerald">İnteraktif Çözüm Sunumu • 9 Slayt</div>
-          <h2 class="section-title">PDF Yerine Canlı Slayt Deneyimiyle Çözüm Mimarimizi Gezin</h2>
+          <div class="eyebrow eyebrow--emerald">İnteraktif Çözüm Sunumu • 9 Slayt + İndirilebilir PDF</div>
+          <h2 class="section-title">Canlı Slayt veya PDF Seçeneğiyle Çözüm Mimarimizi İnceleyin</h2>
           <p class="section-lead">
-            Endüstriyel mutfak ve üretim tesisleri için hazırladığımız tam ürün sunumunu indirmeye gerek kalmadan slayt slayt inceleyin, çözümlere göre atlayın ve gerçek Backoffice ile mobil ekranları tam ekranda yakınlaştırın.
+            Endüstriyel mutfak ve üretim tesisleri için hazırladığımız tam ürün sunumunu sayfa içinde geniş ekranda gezebilir, tam ekran okuma modunda yakınlaştırabilir ya da orijinal PDF kataloğunu tek tıkla açıp indirebilirsiniz.
           </p>
         </header>
 
@@ -456,7 +459,9 @@
             <div class="deck-controls">
               <span class="deck-counter" id="slideCounter" aria-live="polite">01 / 09</span>
               <button type="button" class="btn btn--ghost btn--sm" id="toggleAutoplayBtn" aria-pressed="false">Otomatik Oynat</button>
-              <button type="button" class="btn btn--primary btn--sm" id="openLightboxBtn">Tam Ekran İncele</button>
+              <button type="button" class="btn btn--primary btn--sm" id="openLightboxBtn">Okuma Modunda Aç ⤢</button>
+              <a href="/assets/OpusPanel-ERP-Tanitim-Katalogu.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">PDF Aç ↗</a>
+              <a href="/assets/OpusPanel-ERP-Tanitim-Katalogu.pdf" download="OpusPanel-ERP-Tanitim-Katalogu.pdf" class="btn btn--emerald btn--sm">PDF İndir ↓</a>
             </div>
           </div>
 
@@ -472,56 +477,74 @@
               <div class="slides-scroller" id="slidesScroller" role="region" aria-roledescription="slayt sunumu" aria-label="Opus ERP Çözüm Slaytları" tabindex="0">
                 <div class="slide-item is-snapped" data-slide-index="1">
                   <div class="slide-card">
-                    <img src="/assets/slides/slide-01-740.webp" srcset="/assets/slides/slide-01-740.webp 740w, /assets/slides/slide-01-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 1: Opus ERP Backoffice ve Mobil Saha Ekosistemi — Ofisten Sahaya Tek Omurga" width="1487" height="2105" loading="lazy" decoding="async">
-                    <button type="button" class="slide-zoom-btn" data-open-lightbox="1">Yakınlaştır ⤢</button>
+                    <button type="button" class="slide-surface-btn" data-open-lightbox="1" aria-label="Slayt 1 büyütülmüş okuma modunda aç">
+                      <img src="/assets/slides/slide-01-1480.webp" srcset="/assets/slides/slide-01-740.webp 740w, /assets/slides/slide-01-1480.webp 1487w, /assets/slides/slide-01-2230.webp 2231w" sizes="(max-width: 980px) 92vw, 56vw" alt="Slayt 1: Opus ERP Backoffice ve Mobil Saha Ekosistemi — Ofisten Sahaya Tek Omurga" width="2231" height="3157" loading="lazy" decoding="async">
+                      <span class="slide-zoom-badge" aria-hidden="true">Okumak İçin Büyüt ⤢</span>
+                    </button>
                   </div>
                 </div>
                 <div class="slide-item" data-slide-index="2">
                   <div class="slide-card">
-                    <img src="/assets/slides/slide-02-740.webp" srcset="/assets/slides/slide-02-740.webp 740w, /assets/slides/slide-02-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 2: Ofiste Planla ve Yönet, Sahada Kamerayla Anında Uygula — 7 Adımlı Süreç Akışı" width="1487" height="2105" loading="lazy" decoding="async">
-                    <button type="button" class="slide-zoom-btn" data-open-lightbox="2">Yakınlaştır ⤢</button>
+                    <button type="button" class="slide-surface-btn" data-open-lightbox="2" aria-label="Slayt 2 büyütülmüş okuma modunda aç">
+                      <img src="/assets/slides/slide-02-1480.webp" srcset="/assets/slides/slide-02-740.webp 740w, /assets/slides/slide-02-1480.webp 1487w, /assets/slides/slide-02-2230.webp 2231w" sizes="(max-width: 980px) 92vw, 56vw" alt="Slayt 2: Ofiste Planla ve Yönet, Sahada Kamerayla Anında Uygula — 7 Adımlı Süreç Akışı" width="2231" height="3157" loading="lazy" decoding="async">
+                      <span class="slide-zoom-badge" aria-hidden="true">Okumak İçin Büyüt ⤢</span>
+                    </button>
                   </div>
                 </div>
                 <div class="slide-item" data-slide-index="3">
                   <div class="slide-card">
-                    <img src="/assets/slides/slide-03-740.webp" srcset="/assets/slides/slide-03-740.webp 740w, /assets/slides/slide-03-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 3: Pahalı El Terminali Yok — Mevcut Telefon Kamerasıyla DataMatrix ve QR Okuma" width="1487" height="2105" loading="lazy" decoding="async">
-                    <button type="button" class="slide-zoom-btn" data-open-lightbox="3">Yakınlaştır ⤢</button>
+                    <button type="button" class="slide-surface-btn" data-open-lightbox="3" aria-label="Slayt 3 büyütülmüş okuma modunda aç">
+                      <img src="/assets/slides/slide-03-1480.webp" srcset="/assets/slides/slide-03-740.webp 740w, /assets/slides/slide-03-1480.webp 1487w, /assets/slides/slide-03-2230.webp 2231w" sizes="(max-width: 980px) 92vw, 56vw" alt="Slayt 3: Pahalı El Terminali Yok — Mevcut Telefon Kamerasıyla DataMatrix ve QR Okuma" width="2231" height="3157" loading="lazy" decoding="async">
+                      <span class="slide-zoom-badge" aria-hidden="true">Okumak İçin Büyüt ⤢</span>
+                    </button>
                   </div>
                 </div>
                 <div class="slide-item" data-slide-index="4">
                   <div class="slide-card">
-                    <img src="/assets/slides/slide-04-740.webp" srcset="/assets/slides/slide-04-740.webp 740w, /assets/slides/slide-04-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 4: Üretimde Tam Kontrol — Canlı İş Emri Kokpiti, Reçete Disiplini ve 4 Aşamalı Kalite" width="1487" height="2105" loading="lazy" decoding="async">
-                    <button type="button" class="slide-zoom-btn" data-open-lightbox="4">Yakınlaştır ⤢</button>
+                    <button type="button" class="slide-surface-btn" data-open-lightbox="4" aria-label="Slayt 4 büyütülmüş okuma modunda aç">
+                      <img src="/assets/slides/slide-04-1480.webp" srcset="/assets/slides/slide-04-740.webp 740w, /assets/slides/slide-04-1480.webp 1487w, /assets/slides/slide-04-2230.webp 2231w" sizes="(max-width: 980px) 92vw, 56vw" alt="Slayt 4: Üretimde Tam Kontrol — Canlı İş Emri Kokpiti, Reçete Disiplini ve 4 Aşamalı Kalite" width="2231" height="3157" loading="lazy" decoding="async">
+                      <span class="slide-zoom-badge" aria-hidden="true">Okumak İçin Büyüt ⤢</span>
+                    </button>
                   </div>
                 </div>
                 <div class="slide-item" data-slide-index="5">
                   <div class="slide-card">
-                    <img src="/assets/slides/slide-05-740.webp" srcset="/assets/slides/slide-05-740.webp 740w, /assets/slides/slide-05-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 5: 14 Kurumsal Modül, Akıllı Matris Grid ve Canlı Envanter Ekranı" width="1487" height="2105" loading="lazy" decoding="async">
-                    <button type="button" class="slide-zoom-btn" data-open-lightbox="5">Yakınlaştır ⤢</button>
+                    <button type="button" class="slide-surface-btn" data-open-lightbox="5" aria-label="Slayt 5 büyütülmüş okuma modunda aç">
+                      <img src="/assets/slides/slide-05-1480.webp" srcset="/assets/slides/slide-05-740.webp 740w, /assets/slides/slide-05-1480.webp 1487w, /assets/slides/slide-05-2230.webp 2231w" sizes="(max-width: 980px) 92vw, 56vw" alt="Slayt 5: 14 Kurumsal Modül, Akıllı Matris Grid ve Canlı Envanter Ekranı" width="2231" height="3157" loading="lazy" decoding="async">
+                      <span class="slide-zoom-badge" aria-hidden="true">Okumak İçin Büyüt ⤢</span>
+                    </button>
                   </div>
                 </div>
                 <div class="slide-item" data-slide-index="6">
                   <div class="slide-card">
-                    <img src="/assets/slides/slide-06-740.webp" srcset="/assets/slides/slide-06-740.webp 740w, /assets/slides/slide-06-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 6: Tahmine Dayalı Yönetim Biter — 17+ Canlı ERP Yönetici Raporu ve Karar Kokpiti" width="1487" height="2105" loading="lazy" decoding="async">
-                    <button type="button" class="slide-zoom-btn" data-open-lightbox="6">Yakınlaştır ⤢</button>
+                    <button type="button" class="slide-surface-btn" data-open-lightbox="6" aria-label="Slayt 6 büyütülmüş okuma modunda aç">
+                      <img src="/assets/slides/slide-06-1480.webp" srcset="/assets/slides/slide-06-740.webp 740w, /assets/slides/slide-06-1480.webp 1487w, /assets/slides/slide-06-2230.webp 2231w" sizes="(max-width: 980px) 92vw, 56vw" alt="Slayt 6: Tahmine Dayalı Yönetim Biter — 17+ Canlı ERP Yönetici Raporu ve Karar Kokpiti" width="2231" height="3157" loading="lazy" decoding="async">
+                      <span class="slide-zoom-badge" aria-hidden="true">Okumak İçin Büyüt ⤢</span>
+                    </button>
                   </div>
                 </div>
                 <div class="slide-item" data-slide-index="7">
                   <div class="slide-card">
-                    <img src="/assets/slides/slide-07-740.webp" srcset="/assets/slides/slide-07-740.webp 740w, /assets/slides/slide-07-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 7: Her Koli Hareketi Kayıt Altında — Stok Geçmişi ve Envanter 966 = 966 Eşitliği" width="1487" height="2105" loading="lazy" decoding="async">
-                    <button type="button" class="slide-zoom-btn" data-open-lightbox="7">Yakınlaştır ⤢</button>
+                    <button type="button" class="slide-surface-btn" data-open-lightbox="7" aria-label="Slayt 7 büyütülmüş okuma modunda aç">
+                      <img src="/assets/slides/slide-07-1480.webp" srcset="/assets/slides/slide-07-740.webp 740w, /assets/slides/slide-07-1480.webp 1487w, /assets/slides/slide-07-2230.webp 2231w" sizes="(max-width: 980px) 92vw, 56vw" alt="Slayt 7: Her Koli Hareketi Kayıt Altında — Stok Geçmişi ve Envanter 966 = 966 Eşitliği" width="2231" height="3157" loading="lazy" decoding="async">
+                      <span class="slide-zoom-badge" aria-hidden="true">Okumak İçin Büyüt ⤢</span>
+                    </button>
                   </div>
                 </div>
                 <div class="slide-item" data-slide-index="8">
                   <div class="slide-card">
-                    <img src="/assets/slides/slide-08-740.webp" srcset="/assets/slides/slide-08-740.webp 740w, /assets/slides/slide-08-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 8: Mutabakat Mimarisi — Kütle Korunumu ve Tek Koli = Tek Lokasyon Kuralı" width="1487" height="2105" loading="lazy" decoding="async">
-                    <button type="button" class="slide-zoom-btn" data-open-lightbox="8">Yakınlaştır ⤢</button>
+                    <button type="button" class="slide-surface-btn" data-open-lightbox="8" aria-label="Slayt 8 büyütülmüş okuma modunda aç">
+                      <img src="/assets/slides/slide-08-1480.webp" srcset="/assets/slides/slide-08-740.webp 740w, /assets/slides/slide-08-1480.webp 1487w, /assets/slides/slide-08-2230.webp 2231w" sizes="(max-width: 980px) 92vw, 56vw" alt="Slayt 8: Mutabakat Mimarisi — Kütle Korunumu ve Tek Koli = Tek Lokasyon Kuralı" width="2231" height="3157" loading="lazy" decoding="async">
+                      <span class="slide-zoom-badge" aria-hidden="true">Okumak İçin Büyüt ⤢</span>
+                    </button>
                   </div>
                 </div>
                 <div class="slide-item" data-slide-index="9">
                   <div class="slide-card">
-                    <img src="/assets/slides/slide-09-740.webp" srcset="/assets/slides/slide-09-740.webp 740w, /assets/slides/slide-09-1480.webp 1480w" sizes="(max-width: 980px) 90vw, 45vw" alt="Slayt 9: Satış Sonrası Montaj, Garanti, Yetkili Servis ve Kurumsal Karşılaştırma" width="1487" height="2105" loading="lazy" decoding="async">
-                    <button type="button" class="slide-zoom-btn" data-open-lightbox="9">Yakınlaştır ⤢</button>
+                    <button type="button" class="slide-surface-btn" data-open-lightbox="9" aria-label="Slayt 9 büyütülmüş okuma modunda aç">
+                      <img src="/assets/slides/slide-09-1480.webp" srcset="/assets/slides/slide-09-740.webp 740w, /assets/slides/slide-09-1480.webp 1487w, /assets/slides/slide-09-2230.webp 2231w" sizes="(max-width: 980px) 92vw, 56vw" alt="Slayt 9: Satış Sonrası Montaj, Garanti, Yetkili Servis ve Kurumsal Karşılaştırma" width="2231" height="3157" loading="lazy" decoding="async">
+                      <span class="slide-zoom-badge" aria-hidden="true">Okumak İçin Büyüt ⤢</span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -556,7 +579,8 @@
               </div>
 
               <div class="slide-brief-actions">
-                <button type="button" class="btn btn--primary" id="briefZoomBtn">Tam Ekran Yakınlaştır</button>
+                <button type="button" class="btn btn--primary" id="briefZoomBtn">Tam Ekran Okuma Modu ⤢</button>
+                <a href="/assets/OpusPanel-ERP-Tanitim-Katalogu.pdf" download="OpusPanel-ERP-Tanitim-Katalogu.pdf" class="btn btn--emerald">PDF İndir (4,2 MB) ↓</a>
                 <a href="#iletisim" class="btn btn--ghost" id="briefDemoBtn" data-select-demo="Opus ERP">Bu Çözüm İçin Demo Planla</a>
               </div>
             </aside>
@@ -606,25 +630,30 @@
     </section>
 
     <!-- Lightbox Modal Dialog (<dialog closedby="any">) -->
-    <dialog id="slideLightbox" class="lightbox-dialog" closedby="any" aria-labelledby="lightboxTitle">
+    <dialog id="slideLightbox" class="lightbox-dialog" closedby="any" data-zoom="read" aria-labelledby="lightboxTitle">
       <div class="lightbox-header">
         <div class="lightbox-title-wrap">
           <span class="deck-counter" id="lightboxCounter">01 / 09</span>
           <h2 class="lightbox-title" id="lightboxTitle">Ofisten Sahaya Tek Omurga</h2>
         </div>
         <div class="deck-controls">
-          <button type="button" class="btn btn--ghost btn--sm" id="lightboxZoomToggle" aria-pressed="false">%100 Yakınlaştır</button>
+          <div class="zoom-switcher" role="group" aria-label="Okuma görünümü">
+            <button type="button" class="zoom-pill" data-zoom-mode="fit" aria-pressed="false">Tam Sayfa</button>
+            <button type="button" class="zoom-pill" data-zoom-mode="read" aria-pressed="true">Okuma (%100)</button>
+            <button type="button" class="zoom-pill" data-zoom-mode="detail" aria-pressed="false">Yakın (%140)</button>
+          </div>
+          <a href="/assets/OpusPanel-ERP-Tanitim-Katalogu.pdf" download="OpusPanel-ERP-Tanitim-Katalogu.pdf" class="btn btn--emerald btn--sm">PDF İndir ↓</a>
           <button type="button" class="btn btn--ghost btn--sm" id="lightboxCloseBtn" aria-label="Tam ekran görünümünü kapat">Kapat (Esc)</button>
         </div>
       </div>
 
-      <div class="lightbox-body">
-        <img id="lightboxImg" class="lightbox-img" src="/assets/slides/slide-01-1480.webp" alt="Büyütülmüş sunum slaytı" width="1487" height="2105">
+      <div class="lightbox-body" id="lightboxBody">
+        <img id="lightboxImg" class="lightbox-img" src="/assets/slides/slide-01-2230.webp" alt="Büyütülmüş sunum slaytı" width="2231" height="3157">
       </div>
 
       <div class="lightbox-footer">
         <button type="button" class="btn btn--ghost btn--sm" id="lightboxPrevBtn">← Önceki Slayt</button>
-        <span class="frame-caption">Klavyeden ← / → tuşlarıyla slaytları gezebilir, dışarı tıklayarak kapatabilirsiniz.</span>
+        <span class="frame-caption">Klavyeden ← / → ile slaytları gezebilir, kaydırarak tüm sayfayı net okuyabilirsiniz.</span>
         <button type="button" class="btn btn--primary btn--sm" id="lightboxNextBtn">Sonraki Slayt →</button>
       </div>
     </dialog>

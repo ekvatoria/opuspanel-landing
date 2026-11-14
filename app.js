@@ -291,10 +291,11 @@
   const briefDemoBtn = document.getElementById('briefDemoBtn');
 
   const lightbox = document.getElementById('slideLightbox');
+  const lightboxBody = document.getElementById('lightboxBody');
   const lightboxImg = document.getElementById('lightboxImg');
   const lightboxCounter = document.getElementById('lightboxCounter');
   const lightboxTitle = document.getElementById('lightboxTitle');
-  const lightboxZoomToggle = document.getElementById('lightboxZoomToggle');
+  const zoomBtns = Array.from(document.querySelectorAll('.zoom-pill[data-zoom-mode]'));
   const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
   const lightboxPrevBtn = document.getElementById('lightboxPrevBtn');
   const lightboxNextBtn = document.getElementById('lightboxNextBtn');
@@ -507,23 +508,41 @@
   /* ------------------------------------------------------------------------
      6. Fullscreen Lightbox Modal (<dialog closedby="any">)
      ------------------------------------------------------------------------ */
+  function setLightboxZoom(mode) {
+    if (!lightbox) return;
+    const valid = ['fit', 'read', 'detail'].includes(mode) ? mode : 'read';
+    lightbox.dataset.zoom = valid;
+    zoomBtns.forEach((btn) => {
+      btn.setAttribute('aria-pressed', String(btn.dataset.zoomMode === valid));
+    });
+    if (lightboxBody) {
+      lightboxBody.scrollTop = 0;
+      lightboxBody.scrollLeft = 0;
+    }
+  }
+
   function updateLightboxContent(slideIndex) {
     const data = SLIDES[slideIndex - 1];
     const num = formatSlideNum(slideIndex);
     if (lightboxImg) {
-      lightboxImg.src = `/assets/slides/slide-${num}-1480.webp`;
+      lightboxImg.src = `/assets/slides/slide-${num}-2230.webp`;
       lightboxImg.alt = `Slayt ${slideIndex}: ${data.title}`;
     }
     if (lightboxCounter) lightboxCounter.textContent = `${num} / 09`;
     if (lightboxTitle) lightboxTitle.textContent = data.title;
     if (lightboxPrevBtn) lightboxPrevBtn.disabled = slideIndex === 1;
     if (lightboxNextBtn) lightboxNextBtn.disabled = slideIndex === SLIDES.length;
+    if (lightboxBody) {
+      lightboxBody.scrollTop = 0;
+      lightboxBody.scrollLeft = 0;
+    }
   }
 
   function openLightbox(slideIndex = activeSlide) {
     if (!lightbox) return;
     stopAutoplay();
     goToSlide(slideIndex);
+    setLightboxZoom('read');
     updateLightboxContent(slideIndex);
     lightbox.showModal();
   }
@@ -541,6 +560,12 @@
       });
     });
 
+    zoomBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        setLightboxZoom(btn.dataset.zoomMode);
+      });
+    });
+
     lightboxCloseBtn?.addEventListener('click', () => lightbox.close());
 
     lightboxPrevBtn?.addEventListener('click', () => {
@@ -549,12 +574,6 @@
 
     lightboxNextBtn?.addEventListener('click', () => {
       if (activeSlide < SLIDES.length) goToSlide(activeSlide + 1);
-    });
-
-    lightboxZoomToggle?.addEventListener('click', () => {
-      const zoomed = lightbox.classList.toggle('is-zoomed');
-      lightboxZoomToggle.setAttribute('aria-pressed', String(zoomed));
-      lightboxZoomToggle.textContent = zoomed ? 'Ekrana Sığdır' : '%100 Yakınlaştır';
     });
 
     lightbox.addEventListener('keydown', (event) => {
@@ -568,11 +587,7 @@
     });
 
     lightbox.addEventListener('close', () => {
-      lightbox.classList.remove('is-zoomed');
-      if (lightboxZoomToggle) {
-        lightboxZoomToggle.setAttribute('aria-pressed', 'false');
-        lightboxZoomToggle.textContent = '%100 Yakınlaştır';
-      }
+      setLightboxZoom('read');
     });
   }
 

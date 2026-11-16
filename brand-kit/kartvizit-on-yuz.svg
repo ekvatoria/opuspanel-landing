@@ -60,11 +60,11 @@
     <text x="9.2" y="42.1" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="500" font-size="2.18" fill="#34d399">Founder &amp; Lead Software Architect</text>
     <text x="9.2" y="45.8" font-family='"Source Code Pro", Menlo, ui-monospace, monospace' font-weight="500" font-size="1.62" letter-spacing="0.08" fill="#94a3b8">Endüstriyel ERP &amp; Operasyon Sistemleri</text>
 
-    <!-- Bottom-Right Direct Corporate Contact -->
+    <!-- Bottom-Right Direct Contact -->
     <g text-anchor="end">
-      <text x="78.5" y="37.4" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="600" font-size="2.28" fill="#f8fafc">ugurkilic@opuspanel.com</text>
-      <text x="78.5" y="41.5" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="500" font-size="2.28" fill="#cbd5e1">info@opuspanel.com</text>
-      <text x="78.5" y="45.8" font-family='"Source Code Pro", Menlo, ui-monospace, monospace' font-weight="600" font-size="2.12" fill="#a78bfa">www.opuspanel.com</text>
+      <text x="78.5" y="37.2" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="700" font-size="2.52" letter-spacing="0.06" fill="#ffffff">+90 532 246 58 16</text>
+      <text x="78.5" y="41.5" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="500" font-size="2.22" fill="#cbd5e1">ugurkilic@opuspanel.com</text>
+      <text x="78.5" y="45.8" font-family='"Source Code Pro", Menlo, ui-monospace, monospace' font-weight="600" font-size="2.10" fill="#a78bfa">www.opuspanel.com</text>
     </g>
   </g>
 </svg>

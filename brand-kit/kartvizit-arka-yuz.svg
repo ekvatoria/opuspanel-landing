@@ -45,7 +45,7 @@
     <!-- Subtle Bottom Footer Line inside Safe Zone -->
     <line x1="6.5" y1="45.8" x2="55.2" y2="45.8" stroke="#cbd5e1" stroke-width="0.22"/>
     <text x="6.5" y="49.2" font-family='"Source Code Pro", Menlo, ui-monospace, monospace' font-weight="600" font-size="1.78" fill="#1e293b">www.opuspanel.com</text>
-    <text x="27.4" y="49.2" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="500" font-size="1.75" fill="#64748b">·  info@opuspanel.com</text>
+    <text x="27.2" y="49.2" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="700" font-size="1.85" letter-spacing="0.04" fill="#0f172a">·  +90 532 246 58 16</text>
 
     <!-- Right QR Showcase Card + L-Brackets -->
     <rect x="59.0" y="13.0" width="20.0" height="20.0" rx="1.4" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.25"/>

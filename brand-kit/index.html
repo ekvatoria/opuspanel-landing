@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpusPanel — Kurumsal Kartvizit &amp; E-posta İmza Kiti</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="../assets/opus-emblem.png">
+  <script>
+    if (location.protocol.startsWith('http') && !location.pathname.endsWith('/') && !location.pathname.endsWith('.html')) {
+      location.replace(location.pathname + '/' + location.search + location.hash);
+    }
+  </script>
+  <style>
+    @layer base, layout, components;
+    @layer base {
+      :root {
+        color-scheme: dark;
+        --bg: #06080f;
+        --card: #0c101b;
+        --surface: #111726;
+        --ink: #f8fafc;
+        --muted: #94a3b8;
+        --violet: #8b5cf6;
+        --emerald: #34d399;
+        --border: rgba(148, 163, 184, 0.2);
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+      }
+      a { color: inherit; }
+    }
+    @layer layout {
+      .wrap {
+        max-width: 1120px;
+        margin-inline: auto;
+        padding: 2.5rem 1.25rem 4rem;
+        display: grid;
+        gap: 2.5rem;
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+      }
+    }
+    @layer components {
+      .topbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .eyebrow {
+        font-family: ui-monospace, Menlo, monospace;
+        font-size: 0.78rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #c4b5fd;
+      }
+      h1 {
+        margin: 0.25rem 0 0;
+        font-size: clamp(1.5rem, 3vw, 2.2rem);
+        letter-spacing: -0.02em;
+      }
+      h2 {
+        margin: 0 0 0.75rem;
+        font-size: 1.25rem;
+      }
+      .panel {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 1rem;
+        padding: 1.4rem;
+        display: grid;
+        gap: 1rem;
+      }
+      .card-preview {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 85 / 55;
+        border-radius: 0.75rem;
+        border: 1px solid rgba(255,255,255,0.12);
+        display: block;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        align-items: center;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.65rem 1.05rem;
+        border-radius: 0.65rem;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        color: var(--ink);
+        font: inherit;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .btn--primary {
+        background: #6d28d9;
+        border-color: #8b5cf6;
+        color: #ffffff;
+      }
+      .btn--emerald {
+        background: #059669;
+        border-color: #34d399;
+        color: #ffffff;
+      }
+      .sig-stage {
+        background: #f8fafc;
+        border-radius: 0.85rem;
+        padding: 1.35rem;
+        overflow-x: auto;
+      }
+      .status {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--emerald);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">OpusPanel · Kurumsal Kimlik Kiti</div>
+        <h1>Kartvizit &amp; E-posta İmza Paketi</h1>
+      </div>
+      <div class="actions">
+        <a class="btn btn--primary" href="kartvizit-baski-85x55mm-bleed-kros.pdf" download>Matbaa Baskı PDF (85×55 + Bleed)</a>
+        <a class="btn" href="kartvizit-on-yuz.svg" download>Ön Yüz SVG</a>
+        <a class="btn" href="kartvizit-arka-yuz.svg" download>Arka Yüz SVG</a>
+        <a class="btn" href="../" id="backHomeLink">Siteye Dön</a>
+      </div>
+    </header>
+
+    <main style="display:grid;gap:2.25rem;">
+      <section class="panel" aria-labelledby="sec-cards">
+        <h2 id="sec-cards">Arkalı Önlü Vektörel Kartvizit (85 × 55 mm · +3 mm Bleed)</h2>
+        <div class="grid-2">
+          <div>
+            <img class="card-preview" src="kartvizit-on-yuz.svg" alt="OpusPanel Kartvizit Ön Yüz — Mat Obsidian VIP" width="850" height="550">
+          </div>
+          <div>
+            <img class="card-preview" src="kartvizit-arka-yuz.svg" alt="OpusPanel Kartvizit Arka Yüz — Teknik Grid ve QR Kod" width="850" height="550">
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn" href="opuspanel-logo-dark.svg" download>Vektörel OP Logo (Koyu Zemin)</a>
+          <a class="btn" href="opuspanel-logo-light.svg" download>Vektörel OP Logo (Açık Zemin)</a>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="sec-sig-ugur">
+        <h2 id="sec-sig-ugur">Mail İmzası 01 — Uğur KILIÇ (ugurkilic@opuspanel.com)</h2>
+        <div class="sig-stage" id="sigUgurStage">
+          <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;font-family:'Avenir Next','Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;max-width:560px;width:100%;background-color:#ffffff;border-radius:12px;border:1px solid #e2e8f0;">
+  <tr>
+    <td style="padding:18px 20px;">
+      <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;width:100%;">
+        <tr>
+          <td width="64" valign="top" style="padding-right:16px;">
+            <a href="https://www.opuspanel.com/" target="_blank" rel="noopener noreferrer" style="display:inline-block;text-decoration:none;background-color:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:7px;">
+              <img src="https://www.opuspanel.com/assets/opus-emblem.png" alt="OpusPanel" width="46" height="46" style="display:block;border:0;width:46px;height:46px;">
+            </a>
+          </td>
+          <td width="3" style="background-color:#6124dc;border-radius:3px;">&nbsp;</td>
+          <td valign="top" style="padding-left:16px;">
+            <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;width:100%;">
+              <tr>
+                <td style="font-size:17px;line-height:1.25;font-weight:700;color:#0f172a;letter-spacing:-0.01em;">
+                  Uğur KILIÇ
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-top:2px;font-size:12.5px;line-height:1.4;font-weight:600;color:#6124dc;">
+                  Founder &amp; Lead Software Architect <span style="color:#94a3b8;font-weight:400;">·</span> <span style="color:#0f172a;">OpusPanel</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-top:10px;padding-bottom:10px;font-size:12.5px;line-height:1.6;color:#334155;">
+                  <a href="mailto:ugurkilic@opuspanel.com" style="color:#0f172a;text-decoration:none;font-weight:600;">ugurkilic@opuspanel.com</a>&nbsp;&nbsp;<span style="color:#cbd5e1;">|</span>&nbsp;&nbsp;<a href="mailto:info@opuspanel.com" style="color:#334155;text-decoration:none;font-weight:500;">info@opuspanel.com</a>
+                  <br>
+                  <a href="https://www.opuspanel.com/" target="_blank" rel="noopener noreferrer" style="color:#059669;text-decoration:none;font-weight:600;">www.opuspanel.com</a>
+                  &nbsp;&nbsp;<span style="color:#cbd5e1;">·</span>&nbsp;&nbsp;
+                  <span style="color:#64748b;font-size:11.5px;">Engineering Beyond Limits</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-top:1px solid #e2e8f0;padding-top:9px;">
+                  <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;width:100%;">
+                    <tr>
+                      <td style="font-size:11px;line-height:1.4;color:#475569;font-weight:600;letter-spacing:0.02em;">
+                        <span style="color:#0284c7;">CRM</span> &nbsp;·&nbsp;
+                        <span style="color:#6124dc;">ERP</span> &nbsp;·&nbsp;
+                        <span style="color:#059669;">ASM</span> &nbsp;·&nbsp;
+                        <span style="color:#e11d48;">DSS</span> &nbsp;·&nbsp;
+                        <span style="color:#d97706;">APPO</span>
+                      </td>
+                      <td align="right" style="font-size:11px;line-height:1.4;">
+                        <a href="https://www.opuspanel.com/#iletisim" target="_blank" rel="noopener noreferrer" style="color:#6124dc;text-decoration:none;font-weight:700;">15 Dk Canlı Demo &rsaquo;</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn--emerald" data-copy-rich="sigUgurStage" data-status="statusUgur">Gmail / Apple Mail İçin Kopyala</button>
+          <button type="button" class="btn" data-copy-html="sigUgurStage" data-status="statusUgur">HTML Kodunu Kopyala</button>
+          <a class="btn" href="mail-imzasi-ugurkilic.html" download>HTML Dosyasını İndir</a>
+          <span class="status" id="statusUgur" aria-live="polite"></span>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="sec-sig-info">
+        <h2 id="sec-sig-info">Mail İmzası 02 — Kurumsal İletişim (info@opuspanel.com)</h2>
+        <div class="sig-stage" id="sigInfoStage">
+          <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;font-family:'Avenir Next','Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;max-width:560px;width:100%;background-color:#ffffff;border-radius:12px;border:1px solid #e2e8f0;">
+  <tr>
+    <td style="padding:18px 20px;">
+      <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;width:100%;">
+        <tr>
+          <td width="64" valign="top" style="padding-right:16px;">
+            <a href="https://www.opuspanel.com/" target="_blank" rel="noopener noreferrer" style="display:inline-block;text-decoration:none;background-color:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:7px;">
+              <img src="https://www.opuspanel.com/assets/opus-emblem.png" alt="OpusPanel" width="46" height="46" style="display:block;border:0;width:46px;height:46px;">
+            </a>
+          </td>
+          <td width="3" style="background-color:#6124dc;border-radius:3px;">&nbsp;</td>
+          <td valign="top" style="padding-left:16px;">
+            <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;width:100%;">
+              <tr>
+                <td style="font-size:17px;line-height:1.25;font-weight:700;color:#0f172a;letter-spacing:-0.01em;">
+                  OpusPanel Kurumsal Mühendislik
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-top:2px;font-size:12.5px;line-height:1.4;font-weight:600;color:#6124dc;">
+                  Endüstriyel ERP, CRM, ASM, DSS &amp; APPO <span style="color:#94a3b8;font-weight:400;">·</span> <span style="color:#0f172a;">Çözüm Ekibi</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-top:10px;padding-bottom:10px;font-size:12.5px;line-height:1.6;color:#334155;">
+                  <a href="mailto:info@opuspanel.com" style="color:#0f172a;text-decoration:none;font-weight:600;">info@opuspanel.com</a>&nbsp;&nbsp;<span style="color:#cbd5e1;">|</span>&nbsp;&nbsp;<a href="mailto:ugurkilic@opuspanel.com" style="color:#334155;text-decoration:none;font-weight:500;">ugurkilic@opuspanel.com</a>
+                  <br>
+                  <a href="https://www.opuspanel.com/" target="_blank" rel="noopener noreferrer" style="color:#059669;text-decoration:none;font-weight:600;">www.opuspanel.com</a>
+                  &nbsp;&nbsp;<span style="color:#cbd5e1;">·</span>&nbsp;&nbsp;
+                  <span style="color:#64748b;font-size:11.5px;">Engineering Beyond Limits</span>
+                </td>
+              </tr>
+              <tr>
+                <td style="border-top:1px solid #e2e8f0;padding-top:9px;">
+                  <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;width:100%;">
+                    <tr>
+                      <td style="font-size:11px;line-height:1.4;color:#475569;font-weight:600;letter-spacing:0.02em;">
+                        <span style="color:#0284c7;">CRM</span> &nbsp;·&nbsp;
+                        <span style="color:#6124dc;">ERP</span> &nbsp;·&nbsp;
+                        <span style="color:#059669;">ASM</span> &nbsp;·&nbsp;
+                        <span style="color:#e11d48;">DSS</span> &nbsp;·&nbsp;
+                        <span style="color:#d97706;">APPO</span>
+                      </td>
+                      <td align="right" style="font-size:11px;line-height:1.4;">
+                        <a href="https://www.opuspanel.com/#iletisim" target="_blank" rel="noopener noreferrer" style="color:#6124dc;text-decoration:none;font-weight:700;">Platformu İnceleyin &rsaquo;</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+        </div>
+        <div class="actions">
+          <button type="button" class="btn btn--emerald" data-copy-rich="sigInfoStage" data-status="statusInfo">Gmail / Apple Mail İçin Kopyala</button>
+          <button type="button" class="btn" data-copy-html="sigInfoStage" data-status="statusInfo">HTML Kodunu Kopyala</button>
+          <a class="btn" href="mail-imzasi-info.html" download>HTML Dosyasını İndir</a>
+          <span class="status" id="statusInfo" aria-live="polite"></span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    (() => {
+      const LIVE_LOGO = 'https://www.opuspanel.com/assets/opus-emblem.png';
+      const LOCAL_LOGO = '../assets/opus-emblem.png';
+
+      if (location.protocol === 'file:') {
+        const back = document.getElementById('backHomeLink');
+        if (back) back.setAttribute('href', '../index.html');
+      }
+
+      // Fallback to local logo when opened offline so preview renders cleanly
+      document.querySelectorAll('.sig-stage img').forEach((img) => {
+        img.addEventListener('error', () => {
+          if (!img.dataset.fallbackApplied) {
+            img.dataset.fallbackApplied = '1';
+            img.src = LOCAL_LOGO;
+          }
+        });
+      });
+
+      const setMsg = (id, msg) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = msg;
+      };
+
+      const serializeSignature = (box) =>
+        box.innerHTML
+          .trim()
+          .replace(/\s*data-fallback-applied="1"/g, '')
+          .replaceAll(LOCAL_LOGO, LIVE_LOGO);
+
+      document.querySelectorAll('[data-copy-rich]').forEach((btn) => {
+        btn.addEventListener('click', async () => {
+          const box = document.getElementById(btn.dataset.copyRich);
+          const statusId = btn.dataset.status;
+          const html = serializeSignature(box);
+          const text = box.innerText.trim();
+          try {
+            if (window.ClipboardItem && navigator.clipboard?.write) {
+              await navigator.clipboard.write([
+                new ClipboardItem({
+                  'text/html': new Blob([html], { type: 'text/html' }),
+                  'text/plain': new Blob([text], { type: 'text/plain' })
+                })
+              ]);
+              setMsg(statusId, 'Zengin mail imzası kopyalandı! Gmail / Apple Mail / Outlook imza alanına Cmd+V ile yapıştırabilirsiniz.');
+              return;
+            }
+          } catch (_) {}
+          const imgs = Array.from(box.querySelectorAll('img'));
+          const prevSrcs = imgs.map((im) => im.getAttribute('src'));
+          imgs.forEach((im) => im.setAttribute('src', LIVE_LOGO));
+          const range = document.createRange();
+          range.selectNodeContents(box);
+          const sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+          document.execCommand('copy');
+          sel.removeAllRanges();
+          imgs.forEach((im, idx) => im.setAttribute('src', prevSrcs[idx]));
+          setMsg(statusId, 'Seçim yoluyla kopyalandı (Cmd+V ile yapıştırabilirsiniz).');
+        });
+      });
+
+      document.querySelectorAll('[data-copy-html]').forEach((btn) => {
+        btn.addEventListener('click', async () => {
+          const box = document.getElementById(btn.dataset.copyHtml);
+          const statusId = btn.dataset.status;
+          const html = serializeSignature(box);
+          try {
+            await navigator.clipboard.writeText(html);
+            setMsg(statusId, 'Ham HTML kodu panoya kopyalandı.');
+          } catch (_) {
+            setMsg(statusId, 'Lütfen indirilebilir HTML dosyasını kullanın.');
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

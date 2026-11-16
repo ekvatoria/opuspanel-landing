@@ -36,13 +36,23 @@
         "slogan": "Engineering Beyond Limits",
         "url": "https://www.opuspanel.com/",
         "logo": "https://www.opuspanel.com/assets/opus-emblem.png",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+90-532-246-58-16",
-          "contactType": "sales",
-          "areaServed": "TR",
-          "availableLanguage": ["Turkish"]
-        }
+        "email": "info@opuspanel.com",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "email": "info@opuspanel.com",
+            "contactType": "sales",
+            "areaServed": "TR",
+            "availableLanguage": ["Turkish"]
+          },
+          {
+            "@type": "ContactPoint",
+            "email": "ugurkilic@opuspanel.com",
+            "contactType": "technical support",
+            "areaServed": "TR",
+            "availableLanguage": ["Turkish"]
+          }
+        ]
       },
       {
         "@type": "WebSite",
@@ -912,8 +922,12 @@
                 <span class="contact-row-val">Uğur KILIÇ</span>
               </div>
               <div class="contact-row">
-                <span class="contact-row-label">Telefon / WhatsApp</span>
-                <a href="tel:+905322465816" class="contact-row-val">+90 532 246 58 16</a>
+                <span class="contact-row-label">Kurumsal E-posta</span>
+                <a href="mailto:info@opuspanel.com" class="contact-row-val">info@opuspanel.com</a>
+              </div>
+              <div class="contact-row">
+                <span class="contact-row-label">Doğrudan İletişim</span>
+                <a href="mailto:ugurkilic@opuspanel.com" class="contact-row-val">ugurkilic@opuspanel.com</a>
               </div>
               <div class="contact-row">
                 <span class="contact-row-label">Web</span>
@@ -921,12 +935,12 @@
               </div>
             </div>
             <div class="hero-actions">
-              <a href="https://wa.me/905322465816" target="_blank" rel="noopener noreferrer" class="btn btn--emerald">WhatsApp'tan Hemen Yaz</a>
-              <a href="tel:+905322465816" class="btn btn--ghost">Telefonla Ara</a>
+              <a href="mailto:info@opuspanel.com?subject=OpusPanel%20Kurumsal%20Bilgi%20ve%20Demo%20Talebi" class="btn btn--emerald">Kurumsal Mail Gönder</a>
+              <a href="mailto:ugurkilic@opuspanel.com?subject=OpusPanel%20M%C3%BChendislik%20%C4%B0leti%C5%9Fimi" class="btn btn--ghost">Uğur Kılıç'a Mail At</a>
             </div>
           </div>
 
-          <form class="planner-card" id="demoPlannerForm" data-default-product="Opus ERP" novalidate>
+          <form class="planner-card" id="demoPlannerForm" action="mailto:info@opuspanel.com" data-default-product="Opus ERP" novalidate>
             <h3>Kişiselleştirilmiş Demo Özeti Oluştur</h3>
 
             <fieldset class="field" style="border: 0; padding: 0;">
@@ -963,7 +977,7 @@
             </div>
 
             <div class="planner-actions">
-              <button type="submit" class="btn btn--primary">WhatsApp ile Demo İste</button>
+              <button type="submit" class="btn btn--primary">E-posta ile Demo İste</button>
               <button type="button" class="btn btn--ghost" id="copyBriefBtn">Mesajı Kopyala</button>
               <span class="copy-status" id="copyStatus" aria-live="polite"></span>
             </div>

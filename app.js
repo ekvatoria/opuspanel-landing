@@ -2,7 +2,7 @@
  * OpusPanel Corporate Experience Controller
  * Handles solution tabs, interactive PDF-to-slide presentation,
  * native dialog light-dismiss fallbacks, Opus APPO video chapters,
- * and tailored WhatsApp demo brief generation.
+ * and tailored email demo brief generation.
  */
 
 (() => {
@@ -630,7 +630,7 @@
   }
 
   /* ------------------------------------------------------------------------
-     8. Smart WhatsApp Demo Brief Planner
+     8. Smart Email Demo Brief Planner
      ------------------------------------------------------------------------ */
   const demoForm = document.getElementById('demoPlannerForm');
   const solutionCheckboxes = Array.from(
@@ -641,21 +641,41 @@
   const briefPreview = document.getElementById('briefPreview');
   const copyBriefBtn = document.getElementById('copyBriefBtn');
   const copyStatus = document.getElementById('copyStatus');
+  let statusResetTimer = 0;
 
-  function buildDemoMessage() {
+  function setStatusMessage(text, durationMs = 4000) {
+    if (!copyStatus) return;
+    clearTimeout(statusResetTimer);
+    copyStatus.textContent = text;
+    statusResetTimer = window.setTimeout(() => {
+      copyStatus.textContent = '';
+    }, durationMs);
+  }
+
+  function getSelectedProductLabel() {
     const selected = solutionCheckboxes
       .filter((cb) => cb.checked)
       .map((cb) => cb.value);
-
     const fallbackProduct =
       demoForm?.dataset.defaultProduct || 'OpusPanel çözümleri';
-    const productText = selected.length > 0 ? selected.join(', ') : fallbackProduct;
+    return selected.length > 0 ? selected.join(', ') : fallbackProduct;
+  }
 
+  function buildDemoMessage() {
+    const productText = getSelectedProductLabel();
     const company = companyInput?.value.trim();
     const sector = sectorSelect?.value || 'Üretim / Fabrika';
     const companyPart = company ? `${company} adına ` : '';
 
     return `Merhaba Uğur Bey, ${companyPart}${productText} için 15 dakikalık canlı demo planlamak istiyoruz. (Faaliyet alanı: ${sector})`;
+  }
+
+  function buildDemoSubject() {
+    const productText = getSelectedProductLabel();
+    const company = companyInput?.value.trim();
+    return company
+      ? `${company} — ${productText} Demo Talebi`
+      : `${productText} — 15 Dakikalık Canlı Demo Talebi`;
   }
 
   function updateBriefPreview() {
@@ -686,22 +706,25 @@
 
     demoForm.addEventListener('submit', (event) => {
       event.preventDefault();
+      const subject = buildDemoSubject();
       const message = buildDemoMessage();
-      const url = `https://wa.me/905322465816?text=${encodeURIComponent(message)}`;
-      window.open(url, '_blank', 'noopener,noreferrer');
+      const mailtoUrl =
+        `mailto:info@opuspanel.com` +
+        `?cc=ugurkilic@opuspanel.com` +
+        `&subject=${encodeURIComponent(subject)}` +
+        `&body=${encodeURIComponent(message)}`;
+      window.location.href = mailtoUrl;
+      setStatusMessage('E-posta taslağı info@opuspanel.com adresine hazırlandı.', 5000);
     });
 
     copyBriefBtn?.addEventListener('click', async () => {
       const message = buildDemoMessage();
       try {
         await navigator.clipboard.writeText(message);
-        if (copyStatus) copyStatus.textContent = 'Mesaj panoya kopyalandı.';
+        setStatusMessage('Mesaj panoya kopyalandı.');
       } catch {
-        if (copyStatus) copyStatus.textContent = 'Metni seçip kopyalayabilirsiniz.';
+        setStatusMessage('Metni seçip kopyalayabilirsiniz.');
       }
-      setTimeout(() => {
-        if (copyStatus) copyStatus.textContent = '';
-      }, 3500);
     });
 
     updateBriefPreview();

@@ -1,0 +1,4 @@
+# Local-only brand kit (excluded from production deploys)
+brand-kit/
+*.psd
+.DS_Store

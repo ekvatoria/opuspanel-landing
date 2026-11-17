@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85 55" width="85mm" height="55mm">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 88 56" width="88mm" height="56mm">
   <defs>
     <linearGradient id="frontAccent" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#8b5cf6"/>
@@ -14,57 +14,51 @@
       <stop offset="55%" stop-color="#4c1d95" stop-opacity="0.08"/>
       <stop offset="100%" stop-color="#06080f" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glowEmerald" cx="12%" cy="92%" r="48%">
-      <stop offset="0%" stop-color="#10b981" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#06080f" stop-opacity="0"/>
-    </radialGradient>
     <clipPath id="bleedClipFront">
-      <rect x="0" y="0" width="85" height="55"/>
+      <rect x="-3" y="-3" width="88" height="56"/>
     </clipPath>
   </defs>
 
   <g clip-path="url(#bleedClipFront)">
-    <!-- Deep Obsidian Mat Canvas -->
-    <rect x="0" y="0" width="85" height="55" fill="#06080f"/>
-    <rect x="0" y="0" width="85" height="55" fill="url(#glowViolet)"/>
-    <rect x="0" y="0" width="85" height="55" fill="url(#glowEmerald)"/>
+    <!-- Deep Obsidian Mat Canvas across full 88x56 bleed -->
+    <rect x="-3" y="-3" width="88" height="56" fill="#06080f"/>
+    <rect x="-3" y="-3" width="88" height="56" fill="url(#glowViolet)"/>
 
-    <!-- Subtle Technical Micro-Grid & Engineering Watermark -->
-    <g transform="translate(43.12 -16.44) scale(0.1150)" opacity="0.075"><path fill="none" stroke="#a78bfa" stroke-width="5.5" d="M 73.00,162.04 L 248.00,61.00 L 248.00,288.06 L 210.00,310.00 L 210.00,126.24 L 110.50,183.69 L 110.50,328.31 L 210.00,385.76 L 210.00,328.00 L 352.00,246.02 L 352.00,212.98 L 317.00,192.78 L 317.00,154.68 L 385.00,193.94 L 385.00,270.90 L 248.00,350.00 L 248.00,451.00 L 73.00,349.96 Z"/><path fill="none" stroke="#34d399" stroke-width="5.5" d="M 263.00,61.00 L 438.00,162.04 L 438.00,301.60 L 317.00,371.46 L 317.00,328.16 L 400.50,279.95 L 400.50,183.69 L 301.00,126.24 L 301.00,257.46 L 263.00,279.40 Z M 126.00,193.94 L 194.00,154.68 L 194.00,192.78 L 159.00,212.98 L 159.00,299.02 L 194.00,319.22 L 194.00,357.32 L 126.00,318.06 Z M 263.00,359.34 L 301.00,337.40 L 301.00,429.06 L 263.00,451.00 Z"/></g><g transform="translate(35.45 -24.12) scale(0.1450)" opacity="0.045"><path fill="none" stroke="#a78bfa" stroke-width="5.5" d="M 73.00,162.04 L 248.00,61.00 L 248.00,288.06 L 210.00,310.00 L 210.00,126.24 L 110.50,183.69 L 110.50,328.31 L 210.00,385.76 L 210.00,328.00 L 352.00,246.02 L 352.00,212.98 L 317.00,192.78 L 317.00,154.68 L 385.00,193.94 L 385.00,270.90 L 248.00,350.00 L 248.00,451.00 L 73.00,349.96 Z"/><path fill="none" stroke="#34d399" stroke-width="5.5" d="M 263.00,61.00 L 438.00,162.04 L 438.00,301.60 L 317.00,371.46 L 317.00,328.16 L 400.50,279.95 L 400.50,183.69 L 301.00,126.24 L 301.00,257.46 L 263.00,279.40 Z M 126.00,193.94 L 194.00,154.68 L 194.00,192.78 L 159.00,212.98 L 159.00,299.02 L 194.00,319.22 L 194.00,357.32 L 126.00,318.06 Z M 263.00,359.34 L 301.00,337.40 L 301.00,429.06 L 263.00,451.00 Z"/></g>
+    <!-- Subtle Technical Wireframe -->
+    <g transform="translate(43.96 -11.59) scale(0.0980)" opacity="0.095"><path fill="none" stroke="#a78bfa" stroke-width="5.5" d="M 73.00,162.04 L 248.00,61.00 L 248.00,288.06 L 210.00,310.00 L 210.00,126.24 L 110.50,183.69 L 110.50,328.31 L 210.00,385.76 L 210.00,328.00 L 352.00,246.02 L 352.00,212.98 L 317.00,192.78 L 317.00,154.68 L 385.00,193.94 L 385.00,270.90 L 248.00,350.00 L 248.00,451.00 L 73.00,349.96 Z"/><path fill="none" stroke="#34d399" stroke-width="5.5" d="M 263.00,61.00 L 438.00,162.04 L 438.00,301.60 L 317.00,371.46 L 317.00,328.16 L 400.50,279.95 L 400.50,183.69 L 301.00,126.24 L 301.00,257.46 L 263.00,279.40 Z M 126.00,193.94 L 194.00,154.68 L 194.00,192.78 L 159.00,212.98 L 159.00,299.02 L 194.00,319.22 L 194.00,357.32 L 126.00,318.06 Z M 263.00,359.34 L 301.00,337.40 L 301.00,429.06 L 263.00,451.00 Z"/></g><g transform="translate(37.57 -17.99) scale(0.1230)" opacity="0.055"><path fill="none" stroke="#a78bfa" stroke-width="5.5" d="M 73.00,162.04 L 248.00,61.00 L 248.00,288.06 L 210.00,310.00 L 210.00,126.24 L 110.50,183.69 L 110.50,328.31 L 210.00,385.76 L 210.00,328.00 L 352.00,246.02 L 352.00,212.98 L 317.00,192.78 L 317.00,154.68 L 385.00,193.94 L 385.00,270.90 L 248.00,350.00 L 248.00,451.00 L 73.00,349.96 Z"/><path fill="none" stroke="#34d399" stroke-width="5.5" d="M 263.00,61.00 L 438.00,162.04 L 438.00,301.60 L 317.00,371.46 L 317.00,328.16 L 400.50,279.95 L 400.50,183.69 L 301.00,126.24 L 301.00,257.46 L 263.00,279.40 Z M 126.00,193.94 L 194.00,154.68 L 194.00,192.78 L 159.00,212.98 L 159.00,299.02 L 194.00,319.22 L 194.00,357.32 L 126.00,318.06 Z M 263.00,359.34 L 301.00,337.40 L 301.00,429.06 L 263.00,451.00 Z"/></g>
 
-    <!-- Top & Bottom Edge Micro Accents -->
-    <rect x="0" y="0" width="85" height="0.75" fill="url(#frontAccent)"/>
-    <rect x="0" y="54.25" width="85" height="0.75" fill="#111726"/>
+    <!-- Top Bleed-Safe Ribbon: -3..+1.8mm (1.8mm stays clearly inside 82x50 red cut!) -->
+    <rect x="-3" y="-3" width="88" height="4.8" fill="url(#frontAccent)"/>
 
-    <!-- Top-Left Identity Lockup -->
-    <g transform="translate(4.573 4.890) scale(0.0264)">
+    <!-- Top-Left Identity Lockup (5mm Safe Zone: x>=5.8, y>=6.0) -->
+    <g transform="translate(4.041 4.530) scale(0.02410)">
       <path fill="#f8fafc" d="M 73.00,162.04 L 248.00,61.00 L 248.00,288.06 L 210.00,310.00 L 210.00,126.24 L 110.50,183.69 L 110.50,328.31 L 210.00,385.76 L 210.00,328.00 L 352.00,246.02 L 352.00,212.98 L 317.00,192.78 L 317.00,154.68 L 385.00,193.94 L 385.00,270.90 L 248.00,350.00 L 248.00,451.00 L 73.00,349.96 Z"/>
       <path fill="#8b5cf6" d="M 263.00,61.00 L 438.00,162.04 L 438.00,301.60 L 317.00,371.46 L 317.00,328.16 L 400.50,279.95 L 400.50,183.69 L 301.00,126.24 L 301.00,257.46 L 263.00,279.40 Z M 126.00,193.94 L 194.00,154.68 L 194.00,192.78 L 159.00,212.98 L 159.00,299.02 L 194.00,319.22 L 194.00,357.32 L 126.00,318.06 Z M 263.00,359.34 L 301.00,337.40 L 301.00,429.06 L 263.00,451.00 Z"/>
     </g>
-    <text x="18.6" y="11.4" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="700" font-size="4.7" letter-spacing="-0.12" fill="#f8fafc">OpusPanel</text>
-    <text x="18.8" y="15.0" font-family='"Source Code Pro", Menlo, ui-monospace, monospace' font-weight="600" font-size="1.62" letter-spacing="0.34" fill="#c4b5fd">ENGINEERING BEYOND LIMITS</text>
+    <text x="16.6" y="10.6" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="700" font-size="4.30" letter-spacing="-0.08" fill="#f8fafc">OpusPanel</text>
+    <text x="16.8" y="13.8" font-family='"Source Code Pro", Menlo, ui-monospace, monospace' font-weight="600" font-size="1.48" letter-spacing="0.27" fill="#c4b5fd">ENGINEERING BEYOND LIMITS</text>
 
-    <!-- Top-Right Precision Badge -->
-    <g opacity="0.9">
-      <rect x="59.0" y="7.1" width="19.5" height="4.2" rx="1.1" fill="#0c101b" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="0.22"/>
-      <circle cx="61.5" cy="9.2" r="0.65" fill="#34d399"/>
-      <text x="63.4" y="9.72" font-family='"Source Code Pro", Menlo, ui-monospace, monospace' font-weight="600" font-size="1.42" letter-spacing="0.14" fill="#cbd5e1">OPUS // SUITE</text>
+    <!-- Top-Right Precision Badge (right edge at 76.2mm -> inside 77mm!) -->
+    <g opacity="0.92">
+      <rect x="58.0" y="6.4" width="18.2" height="3.9" rx="1.0" fill="#0c101b" stroke="#8b5cf6" stroke-opacity="0.45" stroke-width="0.24"/>
+      <circle cx="60.3" cy="8.35" r="0.6" fill="#34d399"/>
+      <text x="61.9" y="8.85" font-family='"Source Code Pro", Menlo, ui-monospace, monospace' font-weight="600" font-size="1.36" letter-spacing="0.10" fill="#cbd5e1">OPUS // SUITE</text>
     </g>
 
     <!-- Crisp Midline Rule -->
-    <line x1="6.5" y1="27.8" x2="78.5" y2="27.8" stroke="#94a3b8" stroke-opacity="0.18" stroke-width="0.2"/>
+    <line x1="5.8" y1="24.4" x2="76.2" y2="24.4" stroke="#94a3b8" stroke-opacity="0.22" stroke-width="0.22"/>
 
-    <!-- Bottom-Left Founder / Architect Lockup -->
-    <rect x="6.5" y="34.2" width="0.75" height="12.2" rx="0.35" fill="url(#verticalBar)"/>
-    <text x="9.1" y="38.2" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="700" font-size="4.6" letter-spacing="-0.1" fill="#ffffff">Uğur KILIÇ</text>
-    <text x="9.2" y="42.1" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="500" font-size="2.18" fill="#34d399">Founder &amp; Lead Software Architect</text>
-    <text x="9.2" y="45.8" font-family='"Source Code Pro", Menlo, ui-monospace, monospace' font-weight="500" font-size="1.62" letter-spacing="0.08" fill="#94a3b8">Endüstriyel ERP &amp; Operasyon Sistemleri</text>
+    <!-- Bottom-Left Founder / Architect Lockup (y<=42.8 -> well above 45mm!) -->
+    <rect x="5.8" y="30.8" width="0.75" height="12.0" rx="0.35" fill="url(#verticalBar)"/>
+    <text x="8.2" y="34.6" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="700" font-size="4.30" letter-spacing="-0.06" fill="#ffffff">Uğur KILIÇ</text>
+    <text x="8.3" y="38.4" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="500" font-size="2.02" fill="#34d399">Founder &amp; Lead Software Architect</text>
+    <text x="8.3" y="42.1" font-family='"Source Code Pro", Menlo, ui-monospace, monospace' font-weight="500" font-size="1.48" letter-spacing="0.04" fill="#94a3b8">Endüstriyel ERP &amp; Operasyon Sistemleri</text>
 
-    <!-- Bottom-Right Direct Contact -->
+    <!-- Bottom-Right Direct Contact (right aligned at 76.2mm) -->
     <g text-anchor="end">
-      <text x="78.5" y="37.2" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="700" font-size="2.52" letter-spacing="0.06" fill="#ffffff">+90 532 246 58 16</text>
-      <text x="78.5" y="41.5" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="500" font-size="2.22" fill="#cbd5e1">ugurkilic@opuspanel.com</text>
-      <text x="78.5" y="45.8" font-family='"Source Code Pro", Menlo, ui-monospace, monospace' font-weight="600" font-size="2.10" fill="#a78bfa">www.opuspanel.com</text>
+      <text x="76.2" y="34.2" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="700" font-size="2.40" letter-spacing="0.05" fill="#ffffff">+90 532 246 58 16</text>
+      <text x="76.2" y="38.2" font-family='"Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif' font-weight="500" font-size="2.06" fill="#cbd5e1">ugurkilic@opuspanel.com</text>
+      <text x="76.2" y="42.1" font-family='"Source Code Pro", Menlo, ui-monospace, monospace' font-weight="600" font-size="1.96" fill="#a78bfa">www.opuspanel.com</text>
     </g>
   </g>
 </svg>
